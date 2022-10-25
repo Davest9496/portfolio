@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "lato", sans-serif;
+}
+
+.header {
+  height: 100vh;
+  background-image: linear-gradient(to right bottom (hsl(0, 0%, 100%)),hsla(196, 79%, 68%, 1));
+}
+
+.text--box {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading {
+  text-transform: uppercase;
+  backface-visibility: hidden;
+}
+
+.primary--heading {
+  font-size: 60px;
+  font-weight: 900;
+  display: block;
+  letter-spacing: 27px;
+
+  animation: moveInRight 1s ease-out;
+}
+
+.first--name {
+  color: #333;
+}
+.last--name {
+  color: #0a81ab;
+}
+
+.sub--heading {
+  color: #0c4271;
+  font-size: 30px;
+  font-weight: 900;
+  display: block;
+  letter-spacing: 6.8px;
+
+  animation: moveInLeft 1s ease-out;
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translate(-100px);
+  }
+
+  80% {
+    transform: translate(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(100px);
+  }
+
+  80% {
+    transform: translate(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.tabs--holder {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top: 90%;
+  height: 14vh;
+  max-width: 500px;
+  left: 48.65%;
+  transform: translate(-50%, -50%);
+}
+
+.pop--up--container {
+  display: flex;
+  height: 27%;
+  justify-content: space-evenly;
+  display: none;
+}
+
+.pop-up {
+  border: 2px solid;
+  border-radius: 8px;
+  width: 65px;
+}
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  transition: all, 1s;
+}
+
+.btn:hover {
+  transform: scale(1.4) translateY(-10px);
+  box-shadow: 0, 10px, 20px rgba(0, 0, 0, 0.5);
+}
+
+.btn:active {
+  transform: translateY(-3px);
+  box-shadow: 0, 10px, 20px rgba(0, 0, 0, 0.5);
+}
+
+.tabs--container {
+  display: flex;
+  border: 1px solid rgba(153, 153, 153, 0.301);
+  border-radius: 12px;
+  padding: 5px;
+  height: 65px;
+  background-color: rgba(9, 9, 9, 0.01);
+  justify-content: space-between;
+}
+
+.tabs {
+  border: 1px solid rgba(153, 153, 153, 0.501);
+  border-radius: 12px;
+  cursor: pointer;
+  opacity: 0.8;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  z-index: 2;
+  background-color: #fff;
+}
+
+.fa-brands,
+.fa-solid {
+  font-size: 36px;
+  color: #0c4271;
+  top: 50%;
+  left: 50%;
+}
