@@ -19,7 +19,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+/* -----homa page----- */
 .heading {
   text-transform: uppercase;
   backface-visibility: hidden;
@@ -41,6 +41,21 @@ body {
   color: #0a81ab;
 }
 
+.title{
+  text-transform: capitalize;
+  font-weight: 900;
+  color: #333;
+}
+
+.text--par{
+  line-height: 1.7;
+  font-size: 18px;
+  font-family: Asap,sans-serif;
+  font-weight:600;
+  color: #333;
+  word-spacing: 4px;
+}
+
 .sub--heading {
   color: #0c4271;
   font-size: 30px;
@@ -51,6 +66,7 @@ body {
   animation: moveInLeft 1s ease-out;
 }
 
+/* -----header animations----- */
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -82,15 +98,71 @@ body {
     transform: translate(0);
   }
 }
+
+/* ---about section--- */
+.container--heading{
+   text-align: center;
+   font-size: 36px;
+   margin-top: 5%;
+   margin-bottom: 2%;
+}
+
+.about--container{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+
+.container--info{
+  display: flex;
+  justify-content: center;
+  height: 120px;
+  width: 350px;
+  border: #333 solid 1px;
+  border-radius: 15px;
+  background-color: rgba(184, 230, 247, 0.425);
+}
+
+.display--photo{
+  position: relative;
+  border-radius: 15px;
+  padding: 2%;
+  margin-left: 3%;
+}
+
+.info{
+ height: 150px;
+  margin: 5%;
+  text-align: start;
+}
+.heading--2{
+  color: #0c4271;
+  font-weight: 900;
+}
+
+.info--text{
+  color: #0a81ab;
+  line-height: 1.5;
+}
+
+.text--container{
+  display: flex;
+}
+.text--holder{
+ padding: 5% 25%;
+ margin-bottom: 20px;
+ /* line-height: 1.5; */
+}
+
 /* -----tabs----- */
 .tabs--holder {
   position: fixed;
-  /* position: sticky; */
   display: flex;
   flex-direction: column;
   top: 90%;
-  height: 100px;
-  max-width: 500px;
+  height: 14vh;
+  max-width: 450px;
   width: 100%;
   left: 48.65%;
   transform: translate(-50%, -50%);
@@ -100,7 +172,7 @@ body {
   display: flex;
   height: 27%;
   justify-content: space-evenly;
-  display: none;
+  visibility: hidden;
 }
 
 .pop-up {
@@ -115,7 +187,7 @@ body {
   border-radius: 12px;
   padding: 5px;
   height: 65px;
-  background-color: rgba(9, 9, 9, 0.01);
+  background-color: rgba(255, 255, 255);
   justify-content: space-between;
 }
 
@@ -124,7 +196,7 @@ body {
   border-radius: 12px;
   cursor: pointer;
   opacity: 0.8;
-  width: 60px;
+  width: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,7 +205,7 @@ body {
   background-color: #fff;
 }
 
-/* styling tab icons */
+/* -----styling tab icons----- */
 .fa-brands,
 .fa-solid {
   font-size: 36px;
@@ -145,11 +217,11 @@ body {
 .btn:link,
 .btn:visited {
   text-decoration: none;
-  transition: all, 1s;
+  transition: all, .5s;
 }
 
 .btn:hover {
-  transform: scale(1.4) translateY(-10px);
+  transform: scale(1.2) translateY(-5px);
   box-shadow: 0, 10px, 20px rgba(0, 0, 0, 0.5);
 }
 
