@@ -82,14 +82,16 @@ body {
     transform: translate(0);
   }
 }
-
+/* -----tabs----- */
 .tabs--holder {
-  position: relative;
+  position: fixed;
+  /* position: sticky; */
   display: flex;
   flex-direction: column;
   top: 90%;
-  height: 14vh;
+  height: 100px;
   max-width: 500px;
+  width: 100%;
   left: 48.65%;
   transform: translate(-50%, -50%);
 }
@@ -105,21 +107,6 @@ body {
   border: 2px solid;
   border-radius: 8px;
   width: 65px;
-}
-.btn:link,
-.btn:visited {
-  text-decoration: none;
-  transition: all, 1s;
-}
-
-.btn:hover {
-  transform: scale(1.4) translateY(-10px);
-  box-shadow: 0, 10px, 20px rgba(0, 0, 0, 0.5);
-}
-
-.btn:active {
-  transform: translateY(-3px);
-  box-shadow: 0, 10px, 20px rgba(0, 0, 0, 0.5);
 }
 
 .tabs--container {
@@ -143,14 +130,30 @@ body {
   justify-content: center;
   text-align: center;
   text-decoration: none;
-  z-index: 2;
   background-color: #fff;
 }
 
+/* styling tab icons */
 .fa-brands,
 .fa-solid {
   font-size: 36px;
   color: #0c4271;
   top: 50%;
   left: 50%;
+}
+/* tab animations */
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  transition: all, 1s;
+}
+
+.btn:hover {
+  transform: scale(1.4) translateY(-10px);
+  box-shadow: 0, 10px, 20px rgba(0, 0, 0, 0.5);
+}
+
+.btn:active {
+  transform: translateY(-3px);
+  box-shadow: 0, 10px, 20px rgba(0, 0, 0, 0.5);
 }
