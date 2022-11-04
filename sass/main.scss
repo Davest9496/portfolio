@@ -1,0 +1,265 @@
+$color-primary:  #0a81ab;
+$color-primary-light: #6dcbee;
+$color-primary-dark: #0c4271;
+$color-primary-text: #333333;
+
+$color-light: #fff;
+$color-dark: #000;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "lato", sans-serif;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 100vh;
+  background-image: linear-gradient(to right bottom 
+  (rgba($color-light, 100%)),
+  rgba($color-primary-light, 238));
+  &__text-box {
+  position: absolute;
+  flex-wrap: nowrap;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+}
+
+
+/* -----homa page----- */
+.text-box__heading {
+  text-transform: uppercase;
+  backface-visibility: hidden;
+}
+
+.text-box__heading-primary {
+  font-size: 6rem;
+  font-weight: 900;
+  display: block;
+  letter-spacing: 2.7rem;
+
+  animation: moveInRight 1s ease-out;
+}
+
+.text-box__heading--1 {
+  color:$color-primary-text;
+}
+.text-box__heading--2 {
+  color: $color-primary;
+}
+
+.title{
+  font-size: 2.4rem;
+  text-transform: capitalize;
+  font-weight: 900;
+  color: $color-primary-text;
+}
+
+.text--par{
+  line-height: 1.7;
+  font-size: 1.8rem;
+  font-family: Asap,sans-serif;
+  font-weight:600;
+  color: $color-primary-text;
+  word-spacing: .4rem;
+}
+
+.text-box__sub-heading {
+  color: $color-primary-dark;
+  font-size: 3rem;
+  font-weight: 900;
+  display: block;
+  letter-spacing: .68rem;
+
+  animation: moveInLeft 1s ease-out;
+}
+
+/* -----header animations----- */
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translate(-100px);
+  }
+
+  80% {
+    transform: translate(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(100px);
+  }
+
+  80% {
+    transform: translate(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInTabs {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* ---about section--- */
+.container--heading{
+   text-align: center;
+   font-size: 3.6rem;
+   margin-top: 5%;
+   margin-bottom: 2%;
+}
+
+.about--container{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+
+.container--info{
+  display: flex;
+  justify-content: center;
+  height: 12rem;
+  width: 35rem;
+  border: $color-primary-text solid 1px;
+  border-radius: 1.5rem;
+  background-color: rgba(184, 230, 247, 0.425);
+}
+
+.display--photo{
+  position: relative;
+  border-radius: 1.5rem;
+  padding: 2%;
+  margin-left: 3%;
+}
+
+.info{
+  height: 15rem;
+  margin: 5%;
+  text-align: start;
+}
+.heading--2{
+  color: $color-primary-dark;
+  font-weight: 900;
+  font-size: 1.6rem;
+}
+
+.info--text{
+  color: $color-primary;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.text--container{
+  display: flex;
+}
+.text--holder{
+ padding: 5% 25%;
+ margin-bottom: 2rem;
+}
+
+/* -----tabs----- */
+.tabs--holder {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 90%;
+  height: 14vh;
+  max-width: 45rem;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pop--up--container {
+  display: flex;
+  height: 27%;
+  justify-content: space-evenly;
+  visibility: hidden;
+}
+
+.tabs--pop-up {
+  border: .2rem solid;
+  border-radius: .8rem;
+  width: 6.5rem;
+}
+
+.tabs--container {
+  display: flex;
+  border: .1rem solid rgba(153, 153, 153, 0.301);
+  border-radius: 1.2rem;
+  padding: .5rem;
+  height: 6.5rem;
+  background-color: $color-light;
+  justify-content: space-between;
+
+  animation: moveInTabs .5s ease-out .75s;
+  animation-fill-mode: backwards;
+}
+
+.tabs {
+  border: .1rem solid rgba(153, 153, 153, 0.501);
+  border-radius: 1.2rem;
+  cursor: pointer;
+  opacity: 0.8;
+  width: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  background-color: $color-light;
+}
+
+/* -----styling tab icons----- */
+.fa-brands,
+.fa-solid {
+  font-size: 3.6rem;
+  color: $color-primary-dark;
+  top: 50%;
+  left: 50%;
+}
+/* tab animations */
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  transition: all, .5s;
+}
+
+.btn:hover {
+  transform: scale(1.1) translateY(-.3rem);
+  box-shadow: 0, 1rem, 2rem rgba($color-dark, 0.5);
+}
+
+.btn:active {
+  transform: translateY(-.1rem);
+  box-shadow: 0, .5rem, 1rem rgba($color-dark, 0.5);
+}
