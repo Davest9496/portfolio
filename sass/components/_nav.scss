@@ -1,0 +1,68 @@
+.nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 90%;
+  height: 14vh;
+  max-width: 45rem;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__pop-up--container {
+    display: flex;
+    height: 27%;
+    justify-content: space-evenly;
+    visibility: hidden;
+  }
+
+  &__pop-up--holder {
+    border: 0.2rem solid;
+    border-radius: 0.8rem;
+    width: 6.5rem;
+  }
+  &__tabs {
+    display: flex;
+    border: 0.1rem solid rgba(153, 153, 153, 0.301);
+    border-radius: 1.2rem;
+    padding: 0.5rem;
+    height: 6.5rem;
+    background-color: $color-light;
+    justify-content: space-between;
+
+    animation: moveInTabs 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+
+    &--holder {
+      border: 0.1rem solid rgba(153, 153, 153, 0.501);
+      border-radius: 1.2rem;
+      cursor: pointer;
+      opacity: 0.8;
+      width: 5.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      text-decoration: none;
+      background-color: $color-light;
+    }
+  }
+}
+
+.btn {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    transition: all, 0.5s;
+  }
+
+  &:hover {
+    transform: scale(1.1) translateY(-0.3rem);
+    box-shadow: 0, 1rem, 2rem rgba($color-dark, 0.5);
+  }
+
+  &:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0, 0.5rem, 1rem rgba($color-dark, 0.5);
+  }
+}

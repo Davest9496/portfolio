@@ -22,32 +22,32 @@
     <script defer src="../script.js"></script>
   </head>
   <body>
-    <h1 class="container--heading">
-      <span class="text__heading--1">About</span>
-      <span class="text__heading--2">Me</span>
+    <h1 class="container__heading">
+      <span class="container__heading--1">About</span>
+      <span class="container__heading--2">Me</span>
     </h1>
 
-    <section class="about--container">
-      <div class="container--info">
+    <div class="card">
+      <div class="card__image">
         <img
           src="../images/my_photo.JPG"
           alt="dispay photo"
-          class="display--photo"
+          class="card__image--display"
         />
 
-        <div class="info">
-          <h3 class="heading--2">Dave Ejezie</h3>
-          <p class="info--text">
+        <div class="card__info">
+          <h3 class="card__heading--2">Dave Ejezie</h3>
+          <p class="card__info--text">
             London, United Kingdom <br />
             +44 7359471656 <br />
             evergreendave1@yahoo.com
           </p>
         </div>
       </div>
-    </section>
-    <div text--container>
-      <div class="text--holder">
-        <p class="text--par">
+    </div>
+    <div text__container>
+      <div class="text__holder">
+        <p class="text__par">
           My name is Dave, I have been writing codes for a minimum of 1 year now
           and loving every bit of the exciting adventure. I am based in London,
           United Kingdom. My interest in development started when i took courses
@@ -66,7 +66,7 @@
         <h2 class="title">what are my ambitions?</h2>
         <br />
         <br />
-        <p class="text--par">
+        <p class="text__par">
           Primarily, I strive to acquire a deep understanding of whatever I have
           chosen to do. Web/Software development fascinates me, therefore I am
           eager to asimilate and soak up whatever knowledge and experience that
@@ -78,9 +78,9 @@
         </p>
         <br />
         <br />
-        <h2 class="title">learning to code</h2>
+        <h2 class="text__title">learning to code</h2>
         <br /><br />
-        <p class="text--par">
+        <p class="text__par">
           I have used various learning materials ranging from text to video. The
           Havard CS50 computer science course on edx, online web development
           bootcamp course, the complete Javascript course, Python development,
@@ -97,19 +97,19 @@
           development qualification.
         </p>
         <br /><br />
-        <h2 class="title">why coding?</h2>
+        <h2 class="text__title">why coding?</h2>
         <br />
         <br />
-        <p class="text--par">
+        <p class="text__par">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium,
           voluptatum corporis? Impedit dicta id molestias maxime a qui in iste
           excepturi! Asperiores officiis rem aut veniam non velit modi mollitia!
         </p>
         <br /><br />
-        <h2 class="title">current project</h2>
+        <h2 class="text__title">current project</h2>
         <br />
         <br />
-        <p class="text--par">
+        <p class="text__par">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium,
           voluptatum corporis? Impedit dicta id molestias maxime a qui in iste
           excepturi! Asperiores officiis rem aut veniam non velit modi mollitia!
@@ -117,43 +117,26 @@
       </div>
     </div>
 
-    <div class="tabs--holder">
-      <div class="pop--up--container">
-        <div class="tabs--pop-up">123456</div>
-        <div class="tabs--pop-up">123456</div>
-        <div class="tabs--pop-up">123456</div>
-        <div class="tabs--pop-up">123456</div>
-        <div class="tabs--pop-up">123456</div>
-        <div class="tabs--pop-up">123456</div>
-        <div class="tabs--pop-up">123456</div>
+    <div class="nav">
+        <div class="nav__pop-up--container">
+          <div class="nav__pop-up--holder" id="home">123456</div>
+          <div class="nav__pop-up--holder" id="about">123456</div>
+          <div class="nav__pop-up--holder" id="project">123456</div>
+          <div class="nav__pop-up--holder">123456</div>
+          <div class="nav__pop-up--holder">123456</div>
+          <div class="nav__pop-up--holder">123456</div>
+          <div class="nav__pop-up--holder" id="mail">123456</div>
+        </div>
+        
+        <div class="nav__tabs">
+          <a href= "index.html" id="home" class="btn nav__tabs--holder"><i class="fa-solid fa-house"></i></a>
+          <a href="about.html" id="about" class="btn nav__tabs--holder"><i class="fa-solid fa-user"></i></a>
+          <a href="project.html" class="btn nav__tabs--holder"><i class="fa-solid fa-folder"></i></a>
+          <a href="https://github.com/Davest9496" id="git" class="btn nav__tabs--holder"><i class="fa-brands fa-git"></i></a>
+          <a href="https://twitter.com/DavestDee" id="twitter" class="btn nav__tabs--holder"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/dave-ejezie-896798b9/" id="linkedin" class="btn nav__tabs--holder"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mail.html" id="mail" class="btn nav__tabs--holder"><i class="fa-solid fa-at"></i></a>
+        </div>
       </div>
-
-      <div class="tabs--container">
-        <a href="index.html" id="home" class="btn tabs"
-          ><i class="fa-solid fa-house"></i
-        ></a>
-        <a href="about.html" id="about" class="btn tabs"
-          ><i class="fa-solid fa-user"></i
-        ></a>
-        <a href="project.html" class="btn tabs"
-          ><i class="fa-solid fa-folder"></i
-        ></a>
-        <a href="https://github.com/Davest9496" id="git" class="btn tabs"
-          ><i class="fa-brands fa-git"></i
-        ></a>
-        <a href="https://twitter.com/DavestDee" id="twitter" class="btn tabs"
-          ><i class="fa-brands fa-twitter"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/dave-ejezie-896798b9/"
-          id="linkedin"
-          class="btn tabs"
-          ><i class="fa-brands fa-linkedin-in"></i
-        ></a>
-        <a href="mail.html" id="mail" class="btn tabs"
-          ><i class="fa-solid fa-at"></i
-        ></a>
-      </div>
-    </div>
   </body>
 </html>

@@ -1,0 +1,14 @@
+.header {
+  height: 100vh;
+  background-image: linear-gradient(
+    to right bottom (rgba($color-light, 100%)),
+    rgba($color-primary-light, 238)
+  );
+  &__text-box {
+    position: absolute;
+    flex-wrap: nowrap;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

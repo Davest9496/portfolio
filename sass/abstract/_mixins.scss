@@ -1,0 +1,7 @@
+@mixin firstShade {
+  color: $color-primary-text;
+}
+
+@mixin secondShade {
+  color: $color-primary;
+}

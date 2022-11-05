@@ -1,0 +1,38 @@
+.card {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    height: 12rem;
+    width: 35rem;
+    border: $color-primary-text solid 1px;
+    border-radius: 1.5rem;
+    background-color: rgba(184, 230, 247, 0.425);
+    &--display {
+      position: relative;
+      border-radius: 1.5rem;
+      padding: 2%;
+      margin-left: 3%;
+    }
+  }
+  &__info {
+    height: 15rem;
+    margin: 5%;
+    text-align: start;
+  }
+
+  &__heading--2 {
+    color: $color-primary-dark;
+    font-weight: 900;
+    font-size: 1.6rem;
+  }
+
+  &__info--text {
+    color: $color-primary;
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+}
