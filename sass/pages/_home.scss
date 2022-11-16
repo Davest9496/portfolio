@@ -1,14 +1,32 @@
 .header {
-  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 100vh;
+  padding: 3%;
   background-image: linear-gradient(
     to right bottom (rgba($color-light, 100%)),
     rgba($color-primary-light, 238)
   );
+
   &__text-box {
-    position: absolute;
-    flex-wrap: nowrap;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    position: relative;
+    height: 100vh;
+    margin-bottom: 5rem;
+    justify-content: center;
+    flex-basis: 50%;
+    align-items: center;
+  }
+
+  &__image-box{
+    position: relative;
+    height: 100vh;
+    width: 50%;
+    align-items: center;
+  }
+
+  &__photos{
+    width: 100%;
   }
 }

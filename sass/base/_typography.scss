@@ -1,45 +1,52 @@
 body {
-  font-family: 'lato', sans-serif;
+  font-family: 'Asap', sans-serif;
+  font-family: 'Asap Condensed', sans-serif;
 }
 
 .text-box {
   &__heading {
-    text-transform: uppercase;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 
     &-primary {
-      font-size: 6rem;
+      text-transform: uppercase;
+      font-size: $font-xxlg;
       font-weight: 900;
       display: block;
-      letter-spacing: 2.7rem;
-
-      animation: moveInRight 1s ease-out;
+      letter-spacing: 1rem;
+      margin-bottom: 2rem;
     }
 
     &--1 {
       @include firstShade;
+      display: inline-block;
+      animation: moveInRight 1s ease-out;
     }
     &--2 {
       @include secondShade;
+      display: inline-block;
+      animation: moveInLeft 1s ease-out;
     }
   }
 
   &__sub-heading {
-    color: $color-primary-dark;
-    font-size: 3rem;
-    font-weight: 900;
+    color: $color-primary-text;
+    text-transform: capitalize;
+    font-size: $font-lg;
+    font-weight: 500;
+    line-height: 4rem;
     display: block;
-    letter-spacing: 0.68rem;
+    letter-spacing: .2rem;
 
-    animation: moveInLeft 1s ease-out;
+    animation: moveInTabs 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
   }
 }
 
 /* ---about section--- */
 .container__heading {
   text-align: center;
-  font-size: 3.6rem;
+  font-size: $font-lg;
   margin-top: 5%;
   margin-bottom: 2%;
 
@@ -52,31 +59,35 @@ body {
   }
 }
 
-
-
-.text {
-  &__container {
-    display: flex;
+.card {
+  &__info {
+    margin: 5%;
+    font-size: $font-sm;
+    text-align: start;
   }
 
-  &__holder {
-    padding: 5% 25%;
-    margin-bottom: 2rem;
+  &__heading--2 {
+    font-family: Asap, sans-serif;
+    color: $color-primary-dark;
+    font-weight: 700;
+    font-size: $font-md;
+    margin-bottom: 1rem;
   }
 
+  &__info--text {
+    color: $color-primary;
+    line-height: 1.5;
+  }
+}
+
+.about {
   &__title {
-    font-size: 2.4rem;
-    text-transform: capitalize;
-    font-weight: 900;
-    color: $color-primary-text;
+    font-size:$font-md;
   }
 
   &__par {
-    line-height: 1.7;
-    font-size: 1.8rem;
-    font-family: Asap, sans-serif;
-    font-weight: 600;
-    color: $color-primary-text;
+    font-size: $font-sm;
     word-spacing: 0.4rem;
+    line-height: 1.7;
   }
 }

@@ -7,10 +7,17 @@
 @import 'base/typography';
 @import 'base/utilities';
 
-@import "components/cards";
+@import "components/btn";
+@import "components/composition";
+@import "components/forms";
 @import "components/nav";
 
+@import "layout/row";
+
+@import "pages/about";
 @import "pages/home";
+@import "pages/mail";
+@import "pages/project";
 
 @import "vendors/fontawesome";
 

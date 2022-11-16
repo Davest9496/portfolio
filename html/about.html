@@ -5,12 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DeeDev| My Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,600;0,700;1,400;1,500;1,700&family=Asap:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/style.css" />
@@ -45,9 +43,9 @@
         </div>
       </div>
     </div>
-    <div text__container>
-      <div class="text__holder">
-        <p class="text__par">
+    <div about__container>
+      <div class="about__holder">
+        <p class="about__par u-paragraph">
           My name is Dave, I have been writing codes for a minimum of 1 year now
           and loving every bit of the exciting adventure. I am based in London,
           United Kingdom. My interest in development started when i took courses
@@ -63,10 +61,10 @@
         </p>
         <br />
         <br />
-        <h2 class="title">what are my ambitions?</h2>
+        <h2 class="about__title u-title">what are my ambitions?</h2>
         <br />
         <br />
-        <p class="text__par">
+        <p class="about__par u-paragraph">
           Primarily, I strive to acquire a deep understanding of whatever I have
           chosen to do. Web/Software development fascinates me, therefore I am
           eager to asimilate and soak up whatever knowledge and experience that
@@ -78,10 +76,10 @@
         </p>
         <br />
         <br />
-        <h2 class="text__title">learning to code</h2>
+        <h2 class="about__title u-title">learning to code</h2>
         <br /><br />
-        <p class="text__par">
-          I have used various learning materials ranging from text to video. The
+        <p class="about__par u-paragraph">
+          I have used various learning materials ranging from about to video. The
           Havard CS50 computer science course on edx, online web development
           bootcamp course, the complete Javascript course, Python development,
           C# basics, advanced CSS and Saas all on Udemy. <br /><br />I have
@@ -97,19 +95,19 @@
           development qualification.
         </p>
         <br /><br />
-        <h2 class="text__title">why coding?</h2>
+        <h2 class="about__title u-title">why coding?</h2>
         <br />
         <br />
-        <p class="text__par">
+        <p class="about__par u-paragraph">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium,
           voluptatum corporis? Impedit dicta id molestias maxime a qui in iste
           excepturi! Asperiores officiis rem aut veniam non velit modi mollitia!
         </p>
         <br /><br />
-        <h2 class="text__title">current project</h2>
+        <h2 class="about__title u-title">current project</h2>
         <br />
         <br />
-        <p class="text__par">
+        <p class="about__par u-paragraph">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium,
           voluptatum corporis? Impedit dicta id molestias maxime a qui in iste
           excepturi! Asperiores officiis rem aut veniam non velit modi mollitia!
@@ -118,25 +116,48 @@
     </div>
 
     <div class="nav">
-        <div class="nav__pop-up--container">
-          <div class="nav__pop-up--holder" id="home">123456</div>
-          <div class="nav__pop-up--holder" id="about">123456</div>
-          <div class="nav__pop-up--holder" id="project">123456</div>
-          <div class="nav__pop-up--holder">123456</div>
-          <div class="nav__pop-up--holder">123456</div>
-          <div class="nav__pop-up--holder">123456</div>
-          <div class="nav__pop-up--holder" id="mail">123456</div>
-        </div>
-        
-        <div class="nav__tabs">
-          <a href= "index.html" id="home" class="btn nav__tabs--holder"><i class="fa-solid fa-house"></i></a>
-          <a href="about.html" id="about" class="btn nav__tabs--holder"><i class="fa-solid fa-user"></i></a>
-          <a href="project.html" class="btn nav__tabs--holder"><i class="fa-solid fa-folder"></i></a>
-          <a href="https://github.com/Davest9496" id="git" class="btn nav__tabs--holder"><i class="fa-brands fa-git"></i></a>
-          <a href="https://twitter.com/DavestDee" id="twitter" class="btn nav__tabs--holder"><i class="fa-brands fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/in/dave-ejezie-896798b9/" id="linkedin" class="btn nav__tabs--holder"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="mail.html" id="mail" class="btn nav__tabs--holder"><i class="fa-solid fa-at"></i></a>
-        </div>
+      <div class="nav__pop-up--container">
+        <div class="nav__pop-up--holder">123456</div>
+        <div class="nav__pop-up--holder">123456</div>
+        <div class="nav__pop-up--holder">123456</div>
+        <div class="nav__pop-up--holder">123456</div>
+        <div class="nav__pop-up--holder">123456</div>
+        <div class="nav__pop-up--holder">123456</div>
+        <div class="nav__pop-up--holder">123456</div>
       </div>
+
+      <div class="nav__tabs">
+        <a href="/" aria-label="#" class="btn nav__tabs--holder"
+          ><i class="fa-solid fa-house"></i
+        ></a>
+        <a href="/about" aria-label="#" class="btn nav__tabs--holder"
+          ><i class="fa-solid fa-user"></i
+        ></a>
+        <a href="/project" aria-label="#" class="btn nav__tabs--holder"
+          ><i class="fa-solid fa-folder"></i
+        ></a>
+        <a
+          href="https://github.com/Davest9496"
+          aria-label="#"
+          class="btn nav__tabs--holder"
+          ><i class="fa-brands fa-git"></i
+        ></a>
+        <a
+          href="https://twitter.com/DavestDee"
+          aria-label="#"
+          class="btn nav__tabs--holder"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/dave-ejezie-896798b9/"
+          aria-label="#"
+          class="btn nav__tabs--holder"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+        <a href="/mail" aria-label="#" class="btn nav__tabs--holder"
+          ><i class="fa-solid fa-at"></i
+        ></a>
+      </div>
+    </div>
   </body>
 </html>

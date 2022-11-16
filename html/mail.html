@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DeeDev| My Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,600;0,700;1,400;1,500;1,700&family=Asap:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/style.css" />
@@ -18,26 +20,104 @@
     <script defer src="../script.js"></script>
   </head>
   <body>
-    <div class="nav">
-        <div class="nav__pop-up--container">
-          <div class="nav__pop-up--holder" id="home">123456</div>
-          <div class="nav__pop-up--holder" id="about">123456</div>
-          <div class="nav__pop-up--holder" id="project">123456</div>
-          <div class="nav__pop-up--holder">123456</div>
-          <div class="nav__pop-up--holder">123456</div>
-          <div class="nav__pop-up--holder">123456</div>
-          <div class="nav__pop-up--holder" id="mail">123456</div>
-        </div>
-        
-        <div class="nav__tabs">
-          <a href= "index.html" id="home" class="btn nav__tabs--holder"><i class="fa-solid fa-house"></i></a>
-          <a href="about.html" id="about" class="btn nav__tabs--holder"><i class="fa-solid fa-user"></i></a>
-          <a href="project.html" class="btn nav__tabs--holder"><i class="fa-solid fa-folder"></i></a>
-          <a href="https://github.com/Davest9496" id="git" class="btn nav__tabs--holder"><i class="fa-brands fa-git"></i></a>
-          <a href="https://twitter.com/DavestDee" id="twitter" class="btn nav__tabs--holder"><i class="fa-brands fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/in/dave-ejezie-896798b9/" id="linkedin" class="btn nav__tabs--holder"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="mail.html" id="mail" class="btn nav__tabs--holder"><i class="fa-solid fa-at"></i></a>
+    <section class="mail">
+      <div class="mail__me">
+        <div class="mail__me--form">
+          <h1 class="container__heading u-text-align-start u-margin-bottom">
+            <span class="container__heading--1">Contact</span>
+            <span class="container__heading--2">me</span>
+          </h1>
+
+          <form method="post" action="mailto: evergreendave1@yahoo.com" class="form">
+            <div class="form__group">
+              <input
+                type="text"
+                placeholder="Full name"
+                name="full-name"
+                class="form__input"
+                id="name"
+                required
+              />
+              <label for="name" class="form__label">Full name</label>
+            </div>
+
+            <div class="form__group">
+              <input
+                type="email"
+                placeholder="Email address"
+                name="e-mail"
+                class="form__input"
+                id="email"
+                required
+              />
+              <label for="email" class="form__label">Email address</label>
+            </div>
+
+            <div class="text-area">
+              <label for="text-area" class="form__label">Your message</label>
+
+              <textarea
+                name="text-area"
+                id="text-area"
+                cols="30"
+                rows="10"
+                class="message-box u-margin-bottom"
+                required
+              >
+              </textarea>
+            </div>
+
+            <button class="btn-send btn-readme u-margin-bottom" type="submit">
+              Send message &rarr;
+            </button>
+          </form>
         </div>
       </div>
+    </section>
+
+    <div class="nav">
+      <div class="nav__pop-up--container">
+        <div class="nav__pop-up--holder" id="home">123456</div>
+        <div class="nav__pop-up--holder" id="about">123456</div>
+        <div class="nav__pop-up--holder" id="project">123456</div>
+        <div class="nav__pop-up--holder">123456</div>
+        <div class="nav__pop-up--holder">123456</div>
+        <div class="nav__pop-up--holder">123456</div>
+        <div class="nav__pop-up--holder" id="mail">123456</div>
+      </div>
+
+      <div class="nav__tabs">
+        <a href="/" aria-label="#" class="btn nav__tabs--holder"
+          ><i class="fa-solid fa-house"></i
+        ></a>
+        <a href="/about" aria-label="#" class="btn nav__tabs--holder"
+          ><i class="fa-solid fa-user"></i
+        ></a>
+        <a href="/project" aria-label="#" class="btn nav__tabs--holder"
+          ><i class="fa-solid fa-folder"></i
+        ></a>
+        <a
+          href="https://github.com/Davest9496"
+          aria-label="#"
+          class="btn nav__tabs--holder"
+          ><i class="fa-brands fa-git"></i
+        ></a>
+        <a
+          href="https://twitter.com/DavestDee"
+          aria-label="#"
+          class="btn nav__tabs--holder"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/dave-ejezie-896798b9/"
+          aria-label="#"
+          class="btn nav__tabs--holder"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+        <a href="/mail" aria-label="#" class="btn nav__tabs--holder"
+          ><i class="fa-solid fa-at"></i
+        ></a>
+      </div>
+    </div>
   </body>
 </html>

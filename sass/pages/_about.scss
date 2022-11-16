@@ -1,0 +1,35 @@
+.card {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+  &__image {
+    position: relative;
+    display: flex;
+    flex-basis: 35%;
+    justify-content:flex-start;
+    max-height: 15rem;
+    max-width: 38rem;
+    border: $color-primary solid 3px;
+    border-radius: 1.5rem;
+    background-color: $color-grey-light;
+    &--display {
+      position: relative;
+      height: 100%;
+      border-radius: 1.5rem;
+      padding: 1%;
+      // margin-left: 3%;
+    }
+  }
+}
+
+.about {
+  &__container {
+    display: flex;
+  }
+
+  &__holder {
+    padding: 5% 25%;
+    margin-bottom: 2rem;
+  }
+}
