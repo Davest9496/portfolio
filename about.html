@@ -11,13 +11,13 @@
       href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,600;0,700;1,400;1,500;1,700&family=Asap:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/0666a8bc0c.js"
       crossorigin="anonymous"
       defer
     ></script>
-    <script defer src="../script.js"></script>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <h1 class="container__heading">
@@ -116,47 +116,81 @@
     </div>
 
     <div class="nav">
-      <div class="nav__pop-up--container">
-        <div class="nav__pop-up--holder">123456</div>
-        <div class="nav__pop-up--holder">123456</div>
-        <div class="nav__pop-up--holder">123456</div>
-        <div class="nav__pop-up--holder">123456</div>
-        <div class="nav__pop-up--holder">123456</div>
-        <div class="nav__pop-up--holder">123456</div>
-        <div class="nav__pop-up--holder">123456</div>
-      </div>
-
       <div class="nav__tabs">
-        <a href="/" aria-label="#" class="btn nav__tabs--holder"
-          ><i class="fa-solid fa-house"></i
-        ></a>
-        <a href="/about" aria-label="#" class="btn nav__tabs--holder"
-          ><i class="fa-solid fa-user"></i
-        ></a>
-        <a href="/project" aria-label="#" class="btn nav__tabs--holder"
-          ><i class="fa-solid fa-folder"></i
-        ></a>
-        <a
-          href="https://github.com/Davest9496"
-          aria-label="#"
-          class="btn nav__tabs--holder"
-          ><i class="fa-brands fa-git"></i
-        ></a>
-        <a
-          href="https://twitter.com/DavestDee"
-          aria-label="#"
-          class="btn nav__tabs--holder"
-          ><i class="fa-brands fa-twitter"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/dave-ejezie-896798b9/"
-          aria-label="#"
-          class="btn nav__tabs--holder"
-          ><i class="fa-brands fa-linkedin-in"></i
-        ></a>
-        <a href="/mail" aria-label="#" class="btn nav__tabs--holder"
-          ><i class="fa-solid fa-at"></i
-        ></a>
+        <div class="popover__wrapper">
+          <div class="popover__content">
+            <p class="popover__message">Home</p>
+          </div>
+          <a href="/" aria-label="#" class="btn nav__tabs--holder"
+            ><i class="fa-solid fa-house"></i>
+          </a>
+        </div>
+
+        <div class="popover__wrapper">
+          <div class="popover__content">
+            <p class="popover__message">Profile</p>
+          </div>
+          <a href="about.html" aria-label="#" class="btn nav__tabs--holder"
+            ><i class="fa-solid fa-user"></i
+          ></a>
+        </div>
+
+        <div class="popover__wrapper">
+          <div class="popover__content">
+            <p class="popover__message">Projects</p>
+          </div>
+          <a href="project.html" aria-label="#" class="btn nav__tabs--holder"
+            ><i class="fa-solid fa-folder"></i
+          ></a>
+        </div>
+
+        <div class="popover__wrapper">
+          <div class="popover__content">
+            <p class="popover__message">github</p>
+          </div>
+          <a
+            href="https://github.com/Davest9496"
+            aria-label="#"
+            target="_blank"
+            class="btn nav__tabs--holder"
+            ><i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+
+        <div class="popover__wrapper">
+          <div class="popover__content">
+            <p class="popover__message">twitter</p>
+          </div>
+          <a
+            href="https://twitter.com/DavestDee"
+            aria-label="#"
+            target="_blank"
+            class="btn nav__tabs--holder"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+        </div>
+
+        <div class="popover__wrapper">
+          <div class="popover__content">
+            <p class="popover__message">linkedIn</p>
+          </div>
+          <a
+            href="https://www.linkedin.com/in/dave-ejezie-896798b9/"
+            aria-label="#"
+            target="_blank"
+            class="btn nav__tabs--holder"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+        </div>
+
+        <div class="popover__wrapper">
+          <div class="popover__content">
+            <p class="popover__message">email</p>
+          </div>
+          <a href="/mail.html" aria-label="#" class="btn nav__tabs--holder"
+            ><i class="fa-solid fa-at"></i
+          ></a>
+        </div>
       </div>
     </div>
   </body>
