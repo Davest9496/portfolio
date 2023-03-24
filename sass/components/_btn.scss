@@ -1,0 +1,47 @@
+//pre-coded for project page
+
+.btn-readme {
+  &:link,
+  &:visited {
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 1rem 2.5rem;
+    font-size: $font-sm;
+    border-radius: 3px;
+    text-transform: capitalize;
+    transition: all .5s;
+
+    @include respond(tab-land) {
+           background-color: $color-primary;
+           color: $color-light;
+        }
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-light;
+    box-shadow: 0 1rem 2rem rgba($color-dark, 0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-dark, 0.15);
+    transform: translateY(0);
+  }
+}
+
+.btn-send {
+  padding: 10px;
+  font-size: $font-sm;
+  border: 0;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  background-color: transparent;
+  border-radius: 2px;
+  border-bottom: 3px solid $color-primary;
+
+  transition: all 0.2s;
+}
+

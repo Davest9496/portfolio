@@ -1,0 +1,27 @@
+.mail {
+  padding: 10rem 10rem;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-light,
+    $color-grey-light
+  );
+
+  &__me {
+    padding: 1% 5rem;
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-light, 0.9) 0%,
+        rgba($color-light, 0.9) 60%,
+        transparent 40%
+      ),
+      url(../../images/bg-img.jpg);
+
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 1rem 2rem rgba($color-dark, 0.2);
+
+    &--form {
+      width: 60%;
+    }
+  }
+}

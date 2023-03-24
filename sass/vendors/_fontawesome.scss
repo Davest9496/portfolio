@@ -1,0 +1,18 @@
+.fa {
+  &-brands,
+  &-solid {
+    font-size: 2.8rem;
+    color: $color-primary-dark;
+}
+&-location-dot{
+  font-size: $font-sm;
+  margin-right: 2rem;
+}
+
+&-phone,
+&-envelope{
+  font-size: $font-sm;
+  margin-right: 1rem;
+}
+}
+
