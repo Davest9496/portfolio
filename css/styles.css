@@ -311,7 +311,7 @@ body {
   position: fixed;
   display: flex;
   flex-direction: column;
-  top: 98vh;
+  bottom: -8rem;
   height: 14vh;
   max-width: 40rem;
   width: 100%;
@@ -320,7 +320,7 @@ body {
   transform: translate(-50%, -50%); }
   @media only screen and (max-width: 56.25em) {
     .nav {
-      top: 95%; } }
+      bottom: -10rem; } }
   .nav__tabs {
     display: flex;
     align-items: center;

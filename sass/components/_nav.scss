@@ -2,7 +2,7 @@
   position: fixed;
   display: flex;
   flex-direction: column;
-  top: 98vh;
+  bottom: -8rem;
   height: 14vh;
   max-width: 40rem;
   width: 100%;
@@ -11,7 +11,7 @@
   transform: translate(-50%, -50%);
 
   @include respond(tab-port) {
-    top: 95%;
+    bottom: -10rem;
   }
 
   &__tabs {
