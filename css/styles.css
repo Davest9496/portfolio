@@ -639,9 +639,10 @@ body {
 
 .project__text-box {
   font-size: 1.8rem; }
-  @media only screen and (max-width: 75em) {
-    .project__text-box {
-      text-align: center; } }
+
+@media only screen and (max-width: 37.5em) {
+  .project__btn {
+    text-align: center; } }
 
 .container {
   transition: all 1s; }
