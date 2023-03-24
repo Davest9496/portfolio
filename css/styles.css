@@ -318,6 +318,9 @@ body {
   left: 50%;
   z-index: 100;
   transform: translate(-50%, -50%); }
+  @media only screen and (max-width: 56.25em) {
+    .nav {
+      top: 95%; } }
   .nav__tabs {
     display: flex;
     align-items: center;
@@ -439,18 +442,6 @@ body {
     @media only screen and (max-width: 37.5em) {
       .header__text-box {
         width: 100%; } }
-
-.mail {
-  padding: 10rem 10rem;
-  background-image: linear-gradient(to right bottom, #fff, #eee); }
-  .mail__me {
-    padding: 1% 5rem;
-    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 60%, transparent 40%), url(../../images/bg-img.jpg);
-    background-size: cover;
-    border-radius: 3px;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-    .mail__me--form {
-      width: 60%; }
 
 .body__box {
   display: flex;

@@ -10,6 +10,10 @@
   z-index: 100;
   transform: translate(-50%, -50%);
 
+  @include respond(tab-port) {
+    top: 95%;
+  }
+
   &__tabs {
     display: flex;
     align-items: center;
