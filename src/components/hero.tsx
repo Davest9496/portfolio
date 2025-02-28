@@ -5,7 +5,7 @@ import React from "react";
 
 function Hero() {
   return (
-    <div className="flex flex-col absolute transform -translate-x-1/2 -translate-y-1/2 top-2/5 left-1/2">
+    <div className="flex flex-col absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
       <h1 className="text-4xl md:text-4xl font-mono mb-6 text-theme uppercase tracking-widest">
         I am <span className="text-highlight">dave ejezie</span>
       </h1>
@@ -13,9 +13,12 @@ function Hero() {
         A software developer based in London specializing in building (and
         occasionally designing) exceptional digital experiences with Next.js,
         React, and TypeScript.
-        <br /> <br />A software developer based in London specializing in building (and
-        occasionally designing) exceptional digital experiences with Next.js,
-        React, and TypeScript.
+        <br /> <br />A software developer based in London specializing in
+        building (and occasionally designing) exceptional digital experiences
+        with Next.js, React, and TypeScript.
+        <br /> <br />A software developer based in London specializing in
+        building (and occasionally designing) exceptional digital experiences
+        with Next.js, React, and TypeScript.
       </p>
     </div>
   );

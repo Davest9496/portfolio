@@ -18,13 +18,13 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Your Name | Software Developer",
-    template: "%s | Your Name",
+    default: "Dave Ejezie | Full-Stack Software Developer",
+    template: "%s | Dave Ejezie",
   },
   description:
-    "Experienced software developer based in London specializing in web development, React, Next.js, and TypeScript.",
+    "Experienced Full-Stack Software Developer based in London specializing in web development, React, Next.js, and TypeScript.",
   keywords: [
-    "software developer",
+    "Full-Stack Software Developer",
     "web developer",
     "frontend developer",
     "React",
@@ -33,26 +33,26 @@ export const metadata: Metadata = {
     "London",
     "freelance developer",
   ],
-  authors: [{ name: "Your Name" }],
-  creator: "Your Name",
+  authors: [{ name: "Dave Ejezie" }],
+  creator: "Dave Ejezie",
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Your Name | Software Developer",
+    title: "Dave Ejezie | Full-Stack Software Developer",
     description:
-      "Experienced software developer based in London specializing in web development, React, Next.js, and TypeScript.",
+      "Experienced Full-Stack Software Developer based in London specializing in web development, React, Next.js, and TypeScript.",
     url: "https://your-domain.com",
-    siteName: "Your Name Portfolio",
+    siteName: "Dave Ejezie",
     locale: "en_GB",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Your Name | Software Developer",
+    title: "Dave Ejezie | Full-Stack Software Developer",
     description:
-      "Experienced software developer based in London specializing in web development, React, Next.js, and TypeScript.",
+      "Experienced Full-Stack Software Developer based in London specializing in web development, React, Next.js, and TypeScript.",
     creator: "@your_twitter_handle",
   },
 };

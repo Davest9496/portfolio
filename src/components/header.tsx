@@ -5,7 +5,7 @@ import ThemeToggle from "./theme-toggle";
 
 const Header = () => {
   return (
-    <header className="w-full py-4 border-b border-[#B88AF1]/10 bg-theme shadow-md shadow-[#B88AF1]/15">
+    <header className="py-4 border-b border-[#B88AF1]/10 bg-theme shadow-md shadow-[#B88AF1]/15">
       {/* Apply consistent padding using a wrapper div */}
       <div className="px-4 sm:px-8 md:px-16 lg:px-12 xl:px-14 mx-auto max-w-7xl">
         <div className="flex flex-col sm:flex-row justify-between items-center">
