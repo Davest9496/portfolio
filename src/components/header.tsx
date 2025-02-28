@@ -5,7 +5,7 @@ import ThemeToggle from "./theme-toggle";
 
 const Header = () => {
   return (
-    <header className="w-full py-4 border-b border-gray-200 dark:border-gray-800 transition-colors">
+    <header className="w-full py-4 border-b border-[#B88AF1]/10 bg-theme shadow-md shadow-[#B88AF1]/15">
       {/* Apply consistent padding using a wrapper div */}
       <div className="px-4 sm:px-8 md:px-16 lg:px-12 xl:px-14 mx-auto max-w-7xl">
         <div className="flex flex-col sm:flex-row justify-between items-center">
@@ -19,11 +19,11 @@ const Header = () => {
           {/* Navigation Menu and Theme Toggle */}
           <div className="flex items-center gap-6">
             <nav>
-              <ul className="flex flex-wrap justify-center items-center gap-4 md:gap-8 uppercase font-light text-sm tracking-wide">
+              <ul className="flex flex-wrap justify-center items-center gap-4 md:gap-8 uppercase font-light text-xs tracking-wider">
                 <li>
                   <Link
                     href="/"
-                    className="text-gray-700 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-100 transition-colors"
+                    className="text-theme hover:opacity-70 transition-opacity"
                   >
                     Home
                   </Link>
@@ -31,7 +31,7 @@ const Header = () => {
                 <li>
                   <Link
                     href="/about"
-                    className="text-gray-900 dark:text-gray-200 hover:text-gray-500 dark:hover:text-gray-400 transition-colors"
+                    className="text-theme hover:opacity-70 transition-opacity"
                   >
                     About
                   </Link>
@@ -39,7 +39,7 @@ const Header = () => {
                 <li>
                   <Link
                     href="/projects"
-                    className="text-gray-900 dark:text-gray-200 hover:text-gray-500 dark:hover:text-gray-400 transition-colors"
+                    className="text-theme hover:opacity-70 transition-opacity"
                   >
                     Projects
                   </Link>
@@ -47,15 +47,15 @@ const Header = () => {
                 <li>
                   <Link
                     href="/contact"
-                    className="text-gray-900 dark:text-gray-200 hover:text-gray-500 dark:hover:text-gray-400 transition-colors"
+                    className="text-theme hover:opacity-70 transition-opacity"
                   >
                     Contact
                   </Link>
                 </li>
-                <li className="border border-green-500 rounded p-3 hover:scale-105 transition duration-200 shadow-lg font-semibold">
+                <li className="border border-[#B88AF1] rounded p-3 hover:scale-105 transition duration-200 shadow-lg font-mono capitalize">
                   <Link
                     href="https://www.upwork.com/your-profile-link"
-                    className="text-gray-700 dark:text-gray-300"
+                    className=" text-[#B88AF1]"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

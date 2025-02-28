@@ -3,11 +3,11 @@
 import { useState, useEffect } from "react";
 
 export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false);
+  // Start with a neutral state to avoid hydration mismatch
+  const [isDark, setIsDark] = useState<boolean | null>(null);
 
-  // Check for dark mode on component mount and when document becomes available
+  // Check for dark mode on component mount (client-side only)
   useEffect(() => {
-    // Initial check
     setIsDark(document.body.classList.contains("dark"));
 
     // Set up a mutation observer to detect theme changes
@@ -38,6 +38,9 @@ export default function ThemeToggle() {
 
     setIsDark(!isDarkMode);
   };
+
+  // Don't render until we know the theme (client-side only)
+  if (isDark === null) return null;
 
   return (
     <button
