@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -71,7 +72,30 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        {/* Script to avoid theme flashing */}
+        <Script id="theme-script" strategy="beforeInteractive">
+          {`
+            (function() {
+              // Check for saved theme preference
+              const savedTheme = localStorage.getItem('theme');
+              const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+              
+              // Apply theme based on localStorage or system preference
+              if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.body.classList.add('dark');
+              } else {
+                document.body.classList.remove('dark');
+              }
+            })();
+          `}
+        </Script>
+      </head>
       <body className="antialiased min-h-screen">{children}</body>
     </html>
   );
