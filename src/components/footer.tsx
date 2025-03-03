@@ -4,16 +4,12 @@ import Copyright from "./copyright";
 
 const Footer = () => {
   return (
-    <footer className="py-4">
-      <div className="px-4 sm:px-8 md:px-16 lg:px-12 xl:px-14 mx-auto max-w-7xl opacity-50">
-        <div className="grid grid-cols-1 md:grid-cols-2">
-          {/* Left side - Social links and Featured Projects */}
-          <div className="md:col-span-1">
+    <footer className="py-4 mt-50">
+      <div className="mx-auto max-w-7xl opacity-50">
 
-          </div>
 
-          {/* Right - About My Work Section */}
-          <div className="md:col-span-1 md:w-3/4">
+          {/* About My Work Section */}
+          <div className="">
             <div>
               {/* Featured Projects */}
               <div className="">
@@ -55,7 +51,6 @@ const Footer = () => {
             <Copyright />
           </div>
         </div>
-      </div>
     </footer>
   );
 };
