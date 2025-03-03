@@ -5,7 +5,7 @@ import ThemeToggle from "./theme-toggle";
 
 const Header = () => {
   return (
-    <header className="py-4 border-b border-[#B88AF1]/10 bg-theme shadow-md shadow-[#B88AF1]/15">
+    <header className="sticky z-50 top-0 py-4 border-b border-[#B88AF1]/10 bg-theme shadow-md shadow-[#B88AF1]/15">
       {/* Apply consistent padding using a wrapper div */}
       <div className="px-4 sm:px-8 md:px-16 lg:px-12 xl:px-14 mx-auto max-w-7xl">
         <div className="flex flex-col sm:flex-row justify-between items-center">
@@ -55,7 +55,7 @@ const Header = () => {
                 <li className="border border-[#B88AF1] rounded p-3 hover:scale-105 transition duration-200 shadow-lg font-mono capitalize">
                   <Link
                     href="https://www.upwork.com/your-profile-link"
-                    className=" text-[#17A540]"
+                  
                     target="_blank"
                     rel="noopener noreferrer"
                   >

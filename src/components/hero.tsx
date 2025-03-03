@@ -1,57 +1,77 @@
-// filepath: /Users/davest/Desktop/portfolio/src/components/hero.tsx
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import ScrambleIn, {
-  ScrambleInHandle,
-} from "@/fancy/components/text/scramble-in";
+import React from "react";
 import BreathingText from "@/fancy/components/text/breathing-text";
+import Typewriter from "@/fancy/components/text/typewriter";
+import Socials from "./socials";
 
 function Hero() {
-
-  const scrambleRef = useRef<ScrambleInHandle | null>(null);
-
-  useEffect(() => {
-    setTimeout(() => {
-      scrambleRef.current?.start();
-    }, 100); // Adjust the delay as needed
-  }, []);
-
   return (
-    <div className="flex flex-col absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-      <h1 className="text-4xl md:text-4xl font-mono mb-1 text-theme uppercase tracking-widest">
-        I am{" "}
-        <span className="">
+    <section
+      className="min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 md:px-8"
+      aria-label="Introduction"
+    >
+      <div className="max-w-4xl mx-auto text-center md:text-left">
+        <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-4xl font-mono mb-2 md:mb-4 text-theme uppercase tracking-widest">
+          <Typewriter
+            className="tracking-widest"
+            text="i am dave ejezie"
+            speed={100}
+            initialDelay={500}
+            waitTime={2000}
+            deleteSpeed={30}
+            loop={true}
+            showCursor={true}
+            hideCursorOnType={false}
+            cursorChar="_"
+          />
+        </h1>
+
+        <h2 className="mb-4 md:mb-6 text-highlight text-lg sm:text-lg md:text-xl">
           <BreathingText
-            label="dave ejezie"
-            staggerDuration={0.3}
+            label="full-stack software developer"
+            staggerDuration={0.5}
             fromFontVariationSettings="'wght' 100, 'slnt' 0"
             toFontVariationSettings="'wght' 800, 'slnt' -10"
+            className="capitalize"
           />
-        </span>
-      </h1>
+        </h2>
 
-      <h3 className="mb-6 text-highlight">
-        <ScrambleIn
-          ref={scrambleRef}
-          text="full-stack software developer"
-          scrambleSpeed={50}
-          scrambledLetterCount={1}
-          autoStart={false}
-          className="mb-6 capitalize text-xl"
-        />
-      </h3>
+        <article className="mt-4 md:mt-8">
+          <p className="text-sm sm:text-base md:text-sm text-theme max-w-md sm:max-w-lg md:max-w-2xl mx-auto md:mx-0 leading-6 sm:leading-7 md:leading-8">
+            As a London-based web developer
+            , I combine my
+            <span className="font-semibold text-highlight">
+              {" "}
+              passion for business
+            </span>{" "}
+            with
+            <span className="font-semibold"> technical expertise</span> to
+            create
+            <span className="font-semibold text-highlight">
+              {" "}
+              innovative digital solutions
+            </span>{" "}
+            that help businesses thrive. I specialize in crafting and
+            occasionally designing
+            <span className="font-semibold text-highlight">
+              {" "}
+              exceptional digital experiences
+            </span>{" "}
+            using
+            <span className="font-semibold">
+              {" "}
+              cutting-edge technologies
+            </span>{" "}
+            and industry best practices.
+          </p>
+        </article>
 
-      <article>
-        <p className="text-sm text-theme max-w-lg leading-7">
-          As a London-based web developer, I combine my
-          passion for business with technical expertise to create innovative
-          digital solutions that help businesses thrive. I specialize in
-          crafting and occasionally designing exceptional digital experiences
-          using cutting-edge technologies and industry best practices. <br /> <br /> 
-        </p>
-      </article>
-    </div>
+        <div className="mt-8 md:mt-12">
+          <Socials />
+        </div>
+      </div>
+    </section>
   );
 }
 

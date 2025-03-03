@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeInit from "@/components/theme-init";
 import { ThemeScript } from "@/components/theme-script";
+import Header from "@/components/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -79,6 +80,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased min-h-screen">
         <ThemeInit />
+        <Header/>
         {children}
       </body>
     </html>
