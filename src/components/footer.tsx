@@ -4,7 +4,7 @@ import Copyright from "./copyright";
 
 const Footer = () => {
   return (
-    <footer className="py-4 mt-50">
+    <footer className="py-4">
       <div className="mx-auto max-w-7xl opacity-50">
 
 
