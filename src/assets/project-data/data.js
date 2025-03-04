@@ -5,7 +5,7 @@ import image_resizer from "../project-image/image_resizer.png"
 const DATA = [
   {
     id: 1,
-    title: "storefront",
+    title: "storefront - an e-commerce website",
     image: storefront.src,
     details: [
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam" +
@@ -15,11 +15,11 @@ const DATA = [
       "Detail 2",
       "Detail 3",
     ],
-    tools: ["Tool 1", "Tool 2", "Tool 3"],
+    tools: ["SaSS", "Angular", "TypeScript", "NodeJs", "Postgres", "API"],
   },
   {
     id: 2,
-    title: "fyyur",
+    title: "fyyur - a music & venue booking site",
     image: fyyur.src,
     details: [
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam" +
@@ -32,7 +32,7 @@ const DATA = [
   },
   {
     id: 3,
-    title: "image resizer",
+    title: "image resizer - an image resizing web application",
     image: image_resizer.src,
     details: [
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam" +

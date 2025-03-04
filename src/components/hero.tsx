@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import Typewriter from "@/fancy/components/text/typewriter";
 import Socials from "./socials";
 import CenterUnderline from "@/fancy/components/text/underline-center";
@@ -61,7 +62,7 @@ function Hero() {
         </article>
 
         <h3 className="uppercase tracking-wide mt-6 text-xs font-medium opacity-95">
-          <a href="/about">read more about me </a>{" "}
+          <Link href="/about">read more about me </Link>{" "}
           <span className="text-highlight">
             <svg
               xmlns="http://www.w3.org/2000/svg"
