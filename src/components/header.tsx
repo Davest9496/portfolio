@@ -51,7 +51,7 @@ const Header = () => {
                     Contact
                   </Link>
                 </li>
-                <li className="border border-[#129137]/55 rounded p-3 hover:scale-105 transition duration-200 shadow-lg font-mono capitalize">
+                <li className="border border-theme/75 rounded p-3 hover:scale-105 transition duration-200 shadow-lg font-mono capitalize">
                   <Link
                     href="https://www.upwork.com/your-profile-link"
                     target="_blank"

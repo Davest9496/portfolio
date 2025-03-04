@@ -7,6 +7,9 @@ import CenterUnderline from "@/fancy/components/text/underline-center";
 function Page() {
   return (
     <main className="xl:px-50 mt-35 2xl:px-100">
+      <h1 className="capitalize text-theme text-5xl font-extrabold mb-10 opacity-50">
+        about me.
+      </h1>
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
         <div className="lg:col-span-2">
           <div className="">
@@ -24,7 +27,6 @@ function Page() {
           </div>
         </div>
         <div className="lg:col-span-3">
-          <h1 className="capitalize text-theme text-5xl font-extrabold mb-10 opacity-50">about me.</h1>
           <article>
             <p className="text-sm text-theme max-w-xl leading-6">
               As a web developer based in London, I am passionate about creating

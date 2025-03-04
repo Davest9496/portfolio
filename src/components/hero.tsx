@@ -12,7 +12,7 @@ function Hero() {
       aria-label="Introduction"
     >
       <div className="max-w-4xl mx-auto text-center md:text-left mt-10">
-        <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-4xl font-mono mb-2 md:mb-2 text-theme uppercase tracking-widest opacity-55">
+        <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-mono mb-2 md:mb-2 text-theme uppercase tracking-widest opacity-55">
           <Typewriter
             className="tracking-widest"
             text="i am dave ejezie"
