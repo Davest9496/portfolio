@@ -35,23 +35,23 @@ function Hero() {
         <article className="mt-4 md:mt-8">
           <p className="text-sm sm:text-base md:text-sm text-theme max-w-md sm:max-w-lg md:max-w-2xl mx-auto md:mx-0 leading-6 sm:leading-7 md:leading-8 opacity-75">
             As a London-based web developer , I combine my
-            <span className="font-bold text-highlight opacity-55">
+            <span className="font-bold text-highlight opacity-95">
               {" "}
               passion for business
             </span>{" "}
             with
-            <span className="font-bold text-highlight opacity-55">
+            <span className="font-bold text-highlight opacity-95">
               {" "}
               hight-value
             </span>{" "}
             technical expertise to create
-            <span className="font-bold text-highlight opacity-55">
+            <span className="font-bold text-highlight opacity-95">
               {" "}
               innovative
             </span>{" "}
             digital solutions that help businesses thrive. I specialize in
-            crafting and occasionally designing
-            <span className="font-bold text-highlight opacity-55">
+            crafting and (occasionally designing)
+            <span className="font-bold text-highlight opacity-95">
               {" "}
               exceptional
             </span>{" "}
@@ -60,7 +60,7 @@ function Hero() {
           </p>
         </article>
 
-        <h3 className="uppercase tracking-wide mt-6 text-xs font-medium opacity-55">
+        <h3 className="uppercase tracking-wide mt-6 text-xs font-medium opacity-95">
           <a href="/about">read more about me </a>{" "}
           <span className="text-highlight">
             <svg

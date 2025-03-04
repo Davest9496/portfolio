@@ -5,12 +5,12 @@ import ThemeToggle from "./theme-toggle";
 
 const Header = () => {
   return (
-    <header className="fixed z-50 top-0 py-4 border-b border-[#1DCC4F]/10 bg-theme shadow-md shadow-[#1DCC4F]/15 w-full min-w-full">
+    <header className="fixed z-50 top-0 py-4 border-b border-theme/10 bg-theme  w-full min-w-full">
       <div className="px-4 sm:px-8 md:px-16 lg:px-12 xl:px-14 mx-auto max-w-7x">
         <div className="flex flex-col sm:flex-row justify-between items-center">
           {/* Logo/Name Section */}
           <div className="mb-4 sm:mb-0">
-            <Link href="/" className="text-2xl flex items-center opacity-55">
+            <Link href="/" className="text-2xl flex items-center opacity-75">
               <Image src="/logo.svg" alt="Logo" width={28} height={28} />
             </Link>
           </div>
@@ -51,7 +51,7 @@ const Header = () => {
                     Contact
                   </Link>
                 </li>
-                <li className="border border-[#1DCC4F]/55 rounded p-3 hover:scale-105 transition duration-200 shadow-lg font-mono capitalize">
+                <li className="border border-[#129137]/55 rounded p-3 hover:scale-105 transition duration-200 shadow-lg font-mono capitalize">
                   <Link
                     href="https://www.upwork.com/your-profile-link"
                     target="_blank"

@@ -6,7 +6,7 @@ import CenterUnderline from "@/fancy/components/text/underline-center";
 
 function Page() {
   return (
-    <main className="px-50 mt-35">
+    <main className="xl:px-50 mt-35 2xl:px-100">
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
         <div className="lg:col-span-2">
           <div className="">
@@ -15,15 +15,16 @@ function Page() {
               alt="Profile Image"
               width={500}
               height={700}
-              className="rounded-[3px] mb-10 opacity-70"
+              className="rounded-[10px] mb-10 opacity-70"
             />
-            <h3 className="uppercase tracking-wider text-highlight text-xs mb-4 animate-bounce">
+            <h3 className="uppercase tracking-wider text-highlight text-xs mb-4 animate-bounce opacity-70">
               connect with me on socials
             </h3>
             <Socials />
           </div>
         </div>
         <div className="lg:col-span-3">
+          <h1 className="capitalize text-theme text-5xl font-extrabold mb-10 opacity-50">about me.</h1>
           <article>
             <p className="text-sm text-theme max-w-xl leading-6">
               As a web developer based in London, I am passionate about creating
