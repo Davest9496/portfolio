@@ -1,12 +1,12 @@
 "use client";
 
 import Footer from "@/components/footer";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import DATA from "@/assets/project-data/data";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect } from "react";
 import Socials from "@/components/socials";
+import CenterUnderline from "@/fancy/components/text/underline-center";
 
 // TypeScript interface for project data
 interface ProjectData {
@@ -130,18 +130,17 @@ function Page() {
                 {project.tools.map((tool, i) => (
                   <span
                     key={`${project.id}-mobile-tool-${i}`}
-                    className="inline-block px-2 py-1 rounded-full text-highlight text-xs"
+                    className="inline-block px-2 py-1 rounded-full text-highlight text-xs font-mono capitalize opacity-70 border border-[#129137]"
                   >
                     {tool}
                   </span>
                 ))}
               </div>
 
-              <Link
-                href={`/projects/${project.id}`}
-                className="hover:underline inline-block"
-              >
-                view project
+              <Link href={`/projects/${project.id}`} className=" inline-block">
+                <CenterUnderline
+                  label="view project"
+                />
                 <span className="text-highlight">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -149,12 +148,12 @@ function Page() {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-6 h-6 inline-block animate-arrow"
+                    className="w-4 h-4 inline-block ml-1"
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      d="M13.5 4.5l6 6m0 0l-6 6m6-6H3"
+                      d="M10.5 3.75h-6a.75.75 0 0 0-.75.75v15a.75.75 0 0 0 .75.75h15a.75.75 0 0 0 .75-.75v-6a.75.75 0 0 0-1.5 0v5.25H5.25V4.5h5.25a.75.75 0 0 0 0-1.5zM19.25 3.75a.75.75 0 0 0-1.06 0l-7.5 7.5a.75.75 0 0 0 1.06 1.06l7.5-7.5a.75.75 0 0 0 0-1.06z"
                     />
                   </svg>
                 </span>
@@ -205,7 +204,9 @@ function Page() {
                     href={`/projects/${project.id}`}
                     className="inline-block uppercase text-xs tracking-wider"
                   >
-                    view project
+                    <CenterUnderline
+                      label="view project"
+                    />
                     <span className="text-highlight">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -213,12 +214,12 @@ function Page() {
                         viewBox="0 0 24 24"
                         strokeWidth={1.5}
                         stroke="currentColor"
-                        className="w-6 h-6 inline-block animate-arrow"
+                        className="w-4 h-4 inline-block ml-1"
                       >
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          d="M13.5 4.5l6 6m0 0l-6 6m6-6H3"
+                          d="M10.5 3.75h-6a.75.75 0 0 0-.75.75v15a.75.75 0 0 0 .75.75h15a.75.75 0 0 0 .75-.75v-6a.75.75 0 0 0-1.5 0v5.25H5.25V4.5h5.25a.75.75 0 0 0 0-1.5zM19.25 3.75a.75.75 0 0 0-1.06 0l-7.5 7.5a.75.75 0 0 0 1.06 1.06l7.5-7.5a.75.75 0 0 0 0-1.06z"
                         />
                       </svg>
                     </span>

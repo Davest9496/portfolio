@@ -13,7 +13,7 @@ function Hero() {
       aria-label="Introduction"
     >
       <div className="max-w-4xl mx-auto text-center md:text-left mt-10">
-        <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-mono mb-2 md:mb-2 text-theme uppercase tracking-widest opacity-55">
+        <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-mono mb-2 md:mb-2 font-extrabold text-theme uppercase tracking-widest opacity-55">
           <Typewriter
             className="tracking-widest"
             text="i am dave ejezie"
@@ -30,10 +30,10 @@ function Hero() {
 
         <CenterUnderline
           label="full-stack web developer"
-          className="mb-4 md:mb-6 text-highlight text-lg sm:text-lg md:text-xl capitalize opacity-55 font-bold"
+          className="mb-4 md:mb-6 text-highlight text-lg sm:text-lg md:text-xl capitalize opacity-55 font-bold tracking-wider"
         />
 
-        <article className="mt-4 md:mt-8">
+        <article className="">
           <p className="text-sm sm:text-base md:text-sm text-theme max-w-md sm:max-w-lg md:max-w-2xl mx-auto md:mx-0 leading-6 sm:leading-7 md:leading-8 opacity-75">
             As a London-based web developer , I combine my
             <span className="font-bold text-highlight opacity-95">
