@@ -17,6 +17,24 @@ interface ProjectData {
   tools: string[];
 }
 
+// Define fadeInAnimation outside the component to avoid scoping issues
+const fadeInAnimation = `
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+`;
+
 function Page() {
   // State to track which project descriptions are expanded
   const [expandedDescriptions, setExpandedDescriptions] = useState<number[]>(
@@ -89,8 +107,8 @@ function Page() {
   }, []);
 
   return (
-    <main className="px-4 md:px-8 lg:px-16 xl:px-50 md:mt-16 lg:mt-35">
-      <h1 className="capitalize text-theme text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 md:mb-8 lg:mb-10 opacity-50">
+    <main className="px-4 xs:px-5 sm:px-6 md:px-8 lg:px-20 xl:px-50 2xl:px-100 mt-24 sm:mt-28 md:mt-32">
+      <h1 className="capitalize text-theme text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold sm:font-extrabold mb-4 sm:mb-6 md:mb-8 lg:mb-10 opacity-50">
         Featured Projects.
       </h1>
 
@@ -98,48 +116,49 @@ function Page() {
       {DATA.map((project: ProjectData, index: number) => (
         <div
           key={project.id}
-          className={`mb-10 md:mb-24 lg:mb-20 ${
-            index !== DATA.length - 1 ? "" : ""
-          } transition-all duration-500 ease-in-out transform hover:scale-[1.05] rounded-lg p-4 animate-fadeIn max-w-full lg:max-h-[45vh]`}
+          className={`mb-8 sm:mb-12 md:mb-16 lg:mb-20 transition-all duration-500 ease-in-out transform hover:scale-[1.02] sm:hover:scale-[1.03] md:hover:scale-[1.05] rounded-lg p-2 xs:p-3 sm:p-4 animate-fadeIn max-w-full`}
           style={{ animationDelay: `${index * 200}ms` }}
         >
-          {/* Mobile layout (stacked) */}
+          {/* Mobile layout (stacked) - For small phones to medium tablets */}
           <div className="block md:hidden">
-            <div className="text-theme text-4xl font-extrabold opacity-50 mb-4">
+            <div className="text-theme text-2xl xs:text-3xl sm:text-4xl font-bold sm:font-extrabold opacity-50 mb-2 xs:mb-3 sm:mb-4">
               {String(project.id).padStart(2, "0")}
             </div>
-            <div className="mb-4 relative w-full" style={{ height: "40%" }}>
+
+            <div className="relative w-full h-[280px] ">
               <Image
                 src={project.image}
                 alt={`${project.title} project screenshot`}
                 fill
-                className="object-cover rounded w-full"
+                className="object-cover rounded  xs:h-[180px] sm:h-[220px]"
                 priority
               />
             </div>
+
             <div>
-              <h3 className="mb-3 text-highlight text-xl font-semibold capitalize">
+              <h3 className="mb-2 xs:mb-3 text-highlight text-lg xs:text-xl font-semibold capitalize">
                 {project.title}
               </h3>
-              <p className="text-theme mb-4">
+              <p className="text-theme mb-3 xs:mb-4 text-xs xs:text-sm">
                 {truncateText(project.details[0], project.id)}
               </p>
 
               {/* Tech stack buttons for mobile */}
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-1 xs:gap-2 mb-3 xs:mb-4">
                 {project.tools.map((tool, i) => (
                   <span
                     key={`${project.id}-mobile-tool-${i}`}
-                    className="inline-block px-2 py-1 rounded-full text-highlight text-xs font-mono capitalize opacity-70 border border-[#129137]"
+                    className="inline-block px-1 xs:px-2 py-1 rounded-full text-highlight text-[10px] xs:text-xs font-mono capitalize opacity-70 border border-[#129137]"
                   >
                     {tool}
                   </span>
                 ))}
               </div>
 
-              <Link href={`/projects/${project.id}`} className=" inline-block">
+              <Link href={`/projects/${project.id}`} className="inline-block">
                 <CenterUnderline
                   label="view project"
+                  className="text-xs sm:text-sm"
                 />
                 <span className="text-highlight">
                   <svg
@@ -148,7 +167,7 @@ function Page() {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-4 h-4 inline-block ml-1"
+                    className="w-3 h-3 xs:w-4 xs:h-4 inline-block ml-1"
                   >
                     <path
                       strokeLinecap="round"
@@ -168,10 +187,7 @@ function Page() {
             </div>
             <div className="md:col-span-2">
               <div className="grid md:grid-cols-3 gap-4 lg:gap-6">
-                <div
-                  className="md:col-span-1 relative w-full"
-                  style={{ height: "90px" }}
-                >
+                <div className="md:col-span-1 relative w-full h-[90px] lg:h-[120px]">
                   <Image
                     src={project.image}
                     alt={`${project.title} project screenshot`}
@@ -180,16 +196,16 @@ function Page() {
                     priority
                   />
                 </div>
-                <div className="md:col-span-2 mb-6 md:mb-10 lg:mb-20">
-                  <h3 className="mb-3 md:mb-5 text-highlight text-sm md:text-md font-semibold capitalize">
+                <div className="md:col-span-2 mb-4 md:mb-6 lg:mb-8">
+                  <h3 className="mb-2 md:mb-3 lg:mb-4 text-highlight text-sm md:text-base lg:text-lg font-semibold capitalize">
                     {project.title}
                   </h3>
-                  <p className="text-theme mb-3 md:mb-5 text-sm">
+                  <p className="text-theme mb-2 md:mb-3 lg:mb-4 text-xs md:text-sm">
                     {truncateText(project.details[0], project.id, 200)}
                   </p>
 
                   {/* Tech stack buttons */}
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2 mb-3 md:mb-4">
                     {project.tools.map((tool, i) => (
                       <span
                         key={`${project.id}-tool-${i}`}
@@ -204,9 +220,7 @@ function Page() {
                     href={`/projects/${project.id}`}
                     className="inline-block uppercase text-xs tracking-wider"
                   >
-                    <CenterUnderline
-                      label="view project"
-                    />
+                    <CenterUnderline label="view project" />
                     <span className="text-highlight">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -230,28 +244,16 @@ function Page() {
           </div>
         </div>
       ))}
-      <Socials />
-      <Footer />
+
+      <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-16">
+        <Socials />
+      </div>
+
+      <div className="mt-6 sm:mt-8 md:mt-10">
+        <Footer />
+      </div>
     </main>
   );
 }
-
-// Add custom animation to global styles
-const fadeInAnimation = `
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(-10);
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.8s ease-out forwards;
-}
-`;
 
 export default Page;
