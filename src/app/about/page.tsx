@@ -27,7 +27,7 @@ function Page() {
           </div>
         </div>
         <div className="lg:col-span-3">
-          <article>
+          <article className="opacity-55">
             <p className="text-sm text-theme max-w-xl leading-loose">
               As a web developer based in London, I am passionate about creating
               innovative digital solutions that help businesses thrive. My goal

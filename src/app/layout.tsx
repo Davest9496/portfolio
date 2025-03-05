@@ -4,6 +4,7 @@ import "./globals.css";
 import ThemeInit from "@/components/theme-init";
 import { ThemeScript } from "@/components/theme-script";
 import Header from "@/components/header";
+import MouseAnimation from "@/components/mouse-animation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -80,6 +81,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased min-h-screen">
         <ThemeInit />
+        <MouseAnimation/>
         <Header/>
         {children}
       </body>
