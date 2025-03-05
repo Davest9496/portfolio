@@ -19,7 +19,7 @@ const config: Config = {
         "gradient-primary": "linear-gradient(to right, #190334, #210840)",
       },
       screens: {
-        xs: "375px", // Small mobile
+        xs: "425px", // Small mobile
         sm: "640px", // Large mobile
         md: "768px", // Tablet
         lg: "1024px", // Desktop
