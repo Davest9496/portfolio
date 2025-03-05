@@ -34,7 +34,7 @@ function Hero() {
         />
 
         <article className="">
-          <p className="text-sm sm:text-base md:text-sm text-theme max-w-md sm:max-w-lg md:max-w-2xl mx-auto md:mx-0 leading-6 sm:leading-7 md:leading-8 opacity-75">
+          <p className="text-sm sm:text-base md:text-sm text-theme max-w-md sm:max-w-lg md:max-w-2xl mx-auto md:mx-0 leading-loose sm:leading-7 md:leading-8 opacity-75">
             As a London-based web developer , I combine my
             <span className="font-bold text-highlight opacity-95">
               {" "}

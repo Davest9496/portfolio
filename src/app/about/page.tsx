@@ -28,7 +28,7 @@ function Page() {
         </div>
         <div className="lg:col-span-3">
           <article>
-            <p className="text-sm text-theme max-w-xl leading-6">
+            <p className="text-sm text-theme max-w-xl leading-loose">
               As a web developer based in London, I am passionate about creating
               innovative digital solutions that help businesses thrive. My goal
               is to merge my enthusiasm for business with my technical expertise

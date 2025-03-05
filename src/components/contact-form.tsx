@@ -148,14 +148,14 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-4 md:p-6">
-      <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
+    <div className="w-full max-w-2xl mb-50">
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 opacity-50">
         Get In Touch
       </h2>
 
       {/* Success message */}
       {status === "success" && (
-        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+        <div className="border border-green-400 text-green-700 px-4 py-3 rounded mb-4 opacity-70">
           <p>
             Thank you for your message! I will get back to you as soon as
             possible.
@@ -165,7 +165,7 @@ const ContactForm: React.FC = () => {
 
       {/* Error message */}
       {status === "error" && (
-        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+        <div className="border border-red-400 text-red-700 px-4 py-3 rounded mb-4 opacity-70">
           <p>{serverError || "Something went wrong. Please try again."}</p>
         </div>
       )}
@@ -173,7 +173,10 @@ const ContactForm: React.FC = () => {
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Name field */}
         <div>
-          <label htmlFor="name" className="block text-sm font-medium mb-1">
+          <label
+            htmlFor="name"
+            className="block text-xs font-bold text-theme mb-1 opacity-50"
+          >
             Name
           </label>
           <input
@@ -182,20 +185,25 @@ const ContactForm: React.FC = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-              errors.name ? "border-red-500" : "border-gray-300"
+            className={`w-full px-3 py-2 border text-theme text-sm rounded-xs focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+              errors.name ? "border-red-500 opacity-70" : "border-theme"
             }`}
             placeholder="Your name"
             disabled={status === "submitting"}
           />
           {errors.name && (
-            <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+            <p className="mt-1 text-sm text-red-600 opacity-70">
+              {errors.name}
+            </p>
           )}
         </div>
 
         {/* Email field */}
         <div>
-          <label htmlFor="email" className="block text-sm font-medium mb-1">
+          <label
+            htmlFor="email"
+            className="block text-xs font-bold text-theme mb-1 opacity-50"
+          >
             Email
           </label>
           <input
@@ -204,20 +212,25 @@ const ContactForm: React.FC = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-              errors.email ? "border-red-500" : "border-gray-300"
+            className={`w-full px-3 py-2 border text-theme text-sm rounded-xs focus:outline-none focus:ring-2 focus:ring-gray-500 ${
+              errors.email ? "border-red-500 opacity-70" : "border-theme"
             }`}
             placeholder="your.email@example.com"
             disabled={status === "submitting"}
           />
           {errors.email && (
-            <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+            <p className="mt-1 text-sm text-red-600 opacity-70">
+              {errors.email}
+            </p>
           )}
         </div>
 
         {/* Subject field */}
         <div>
-          <label htmlFor="subject" className="block text-sm font-medium mb-1">
+          <label
+            htmlFor="subject"
+            className="block text-xs font-bold text-theme mb-1 opacity-50"
+          >
             Subject
           </label>
           <input
@@ -226,20 +239,25 @@ const ContactForm: React.FC = () => {
             name="subject"
             value={formData.subject}
             onChange={handleChange}
-            className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-              errors.subject ? "border-red-500" : "border-gray-300"
+            className={`w-full px-3 py-2 border text-theme text-sm rounded-xs focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+              errors.subject ? "border-red-500 opacity-70" : "border-theme"
             }`}
-            placeholder="What is this regarding?"
+            placeholder="What is the purpose of your messgae?"
             disabled={status === "submitting"}
           />
           {errors.subject && (
-            <p className="mt-1 text-sm text-red-600">{errors.subject}</p>
+            <p className="mt-1 text-sm text-red-600 opacity-70">
+              {errors.subject}
+            </p>
           )}
         </div>
 
         {/* Message field */}
         <div>
-          <label htmlFor="message" className="block text-sm font-medium mb-1">
+          <label
+            htmlFor="message"
+            className="block text-xs font-bold text-theme mb-1 opacity-50"
+          >
             Message
           </label>
           <textarea
@@ -248,14 +266,16 @@ const ContactForm: React.FC = () => {
             value={formData.message}
             onChange={handleChange}
             rows={5}
-            className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-              errors.message ? "border-red-500" : "border-gray-300"
+            className={`w-full px-3 py-2 border text-theme text-sm rounded-xs focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+              errors.message ? "border-red-500 opacity-70" : "border-theme"
             }`}
             placeholder="Your message here..."
             disabled={status === "submitting"}
           />
           {errors.message && (
-            <p className="mt-1 text-sm text-red-600">{errors.message}</p>
+            <p className="mt-1 text-sm text-red-600 opacity-70">
+              {errors.message}
+            </p>
           )}
         </div>
 
@@ -264,12 +284,12 @@ const ContactForm: React.FC = () => {
           <button
             type="submit"
             disabled={status === "submitting"}
-            className="w-full md:w-auto px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-300 disabled:bg-blue-400 disabled:cursor-not-allowed"
+            className="w-full md:w-auto px-6 py-3 text-theme text-xs tracking-wider rounded-xs uppercase cursor-pointer focus:outline-none focus:ring-0 focus:ring-theme focus:ring-offset-2 transition-transform duration-300 transform hover:scale-102 disabled:bg-grey-400 disabled:cursor-not-allowed border border-theme opacity-70"
           >
             {status === "submitting" ? (
               <span className="flex items-center justify-center">
                 <svg
-                  className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
+                  className="animate-spin -ml-1 mr-2 h-4 w-4 text-theme"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
