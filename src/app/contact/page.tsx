@@ -11,18 +11,18 @@ function Page() {
         contact me!
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
-        <div>
+        <div className="w-full md:w-4/5 ">
           {/* Left side content */}
           <h3 className="mb-4 sm:mb-5 md:mb-6 text-base sm:text-lg md:text-xl font-bold opacity-85">
             Curious about turning that idea into code?
           </h3>
-          <p className="w-full md:w-4/5 text-theme text-sm xs:text-sm sm:text-base leading-relaxed sm:leading-loose mb-8 sm:mb-10 md:mb-16 lg:mb-20 opacity-55">
+          <p className="text-theme text-sm xs:text-sm sm:text-base xl:text-sm leading-relaxed sm:leading-loose mb-8 sm:mb-10 md:mb-16 lg:mb-20 opacity-55">
             I would love to hear from you! Feel free to leave me a message about
             potential projects, drop a line to schedule a coffee chat{" "}
             <span className="font-bold text-highlight">
               (virtual or in-person in London)
             </span>{" "}
-            , or visit my{" "}
+            or visit my{" "}
             <Link
               href="https://www.upwork.com/fl/~011faa355a098da0c6?mp_source=share"
               className="text-highlight font-bold capitalize mr-1"

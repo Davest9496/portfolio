@@ -15,6 +15,7 @@ interface ProjectData {
   image: string;
   details: string[];
   tools: string[];
+  link: string
 }
 
 // Define fadeInAnimation outside the component to avoid scoping issues
@@ -131,7 +132,7 @@ function Page() {
             {/* Project content on the right - vertically stacked image and details */}
             <div className="sm:col-span-3">
               {/* Image container - full width */}
-              <div className="relative w-full h-[200px] xs:h-[160px] sm:h-[280px] md:h-[320px] lg:h-[380px] mb-4 xs:mb-5 sm:mb-6">
+              <div className="relative w-full h-[200px] xs:h-[160px] sm:h-[280px] md:h-[260px] lg:h-[380px] xl:h-[450px] mb-4 xs:mb-5 sm:mb-6">
                 <Image
                   src={project.image}
                   alt={`${project.title} project screenshot`}
@@ -162,7 +163,7 @@ function Page() {
                   ))}
                 </div>
 
-                <Link href={`/projects/${project.id}`} className="inline-block">
+                <Link href={`${project.link}`} className="inline-block" target="_blank" rel="noopener noreferrer">
                   <CenterUnderline
                     label="view project"
                     className="inline-block uppercase text-xs tracking-wider"

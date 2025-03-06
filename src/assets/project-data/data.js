@@ -16,6 +16,7 @@ const DATA = [
       "Detail 3",
     ],
     tools: ["SaSS", "Angular", "TypeScript", "NodeJs", "Postgres", "API"],
+    link: "https://storefront-virid.vercel.app",
   },
   {
     id: 2,
@@ -28,7 +29,8 @@ const DATA = [
         " alias nisi voluptatum sapiente neque laborum odit.",
       "Detail C",
     ],
-    tools: ["Tool A", "Tool B", "Tool C"],
+    tools: ["Flask", "SqlAlchemy", "Bootstrap", "Postgres"],
+    link: "https://duejezie.vercel.app",
   },
   {
     id: 3,
@@ -40,7 +42,8 @@ const DATA = [
         " perferendis dolorum alias, impedit, quos obcaecati? Dignissimos" +
         " alias nisi voluptatum sapiente neque laborum odit.",
     ],
-    tools: ["Detail A", "Detail B", "Detail C"],
+    tools: ["NodeJs", "TypeScript", "Express", "API"],
+    link: "https://image-processing-woad.vercel.app/api",
   },
 ];
 
