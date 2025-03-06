@@ -1,4 +1,3 @@
-// src/components/MouseAnimation.tsx
 "use client"; // This ensures the component only runs on the client side
 
 import React, { useState, useEffect } from "react";
@@ -10,7 +9,40 @@ const MouseAnimation: React.FC = () => {
   // State to track if the mouse is moving (for optional effects)
   const [isMoving, setIsMoving] = useState(false);
 
+  // State to track if device is likely a desktop
+  const [isDesktop, setIsDesktop] = useState(false);
+
   useEffect(() => {
+    // Check if device is likely a desktop (has a mouse)
+    const checkIsDesktop = () => {
+      // A simple way to detect mobile devices is by checking screen width
+      // and whether the device supports hover
+      const width = window.innerWidth;
+      const hasCoarsePointer = window.matchMedia("(pointer: coarse)").matches;
+      const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
+
+      // Consider it a desktop if screen is wider than 768px and it has a fine pointer
+      // or if it explicitly has a fine pointer (mouse/trackpad)
+      return (width > 768 && !hasCoarsePointer) || hasFinePointer;
+    };
+
+    // Set the initial desktop status
+    setIsDesktop(checkIsDesktop());
+
+    // Update on resize (in case of orientation change or browser resize)
+    const handleResize = () => {
+      setIsDesktop(checkIsDesktop());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // If not a desktop device, don't set up mouse tracking
+    if (!checkIsDesktop()) {
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+
     // Timer to track when mouse stops moving
     let moveTimer: NodeJS.Timeout;
 
@@ -24,21 +56,25 @@ const MouseAnimation: React.FC = () => {
       // Clear any existing timers
       clearTimeout(moveTimer);
 
-      // Set a timer to mark mouse as stopped after 100ms of no movement
+      // Set a timer to mark mouse as stopped after 300ms of no movement
       moveTimer = setTimeout(() => {
         setIsMoving(false);
       }, 100);
     };
 
-    // Add event listener for mouse movement
+    // Add event listener for mouse movement only if desktop
     window.addEventListener("mousemove", updateMousePosition);
 
-    // Cleanup function to remove event listener
+    // Cleanup function to remove event listeners
     return () => {
       window.removeEventListener("mousemove", updateMousePosition);
+      window.removeEventListener("resize", handleResize);
       clearTimeout(moveTimer);
     };
   }, []); // Empty dependency array means this effect runs once on mount
+
+  // Don't render anything if not a desktop device
+  if (!isDesktop) return null;
 
   // Calculate the dimensions
   const circleSizePx = isMoving ? 96 : 64; // Approximate pixel equivalent

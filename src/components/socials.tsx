@@ -5,7 +5,7 @@ function Socials() {
     <div className="flex gap-6 mb-6">
       {/* GitHub */}
       <a
-        href="https://github.com/daveejezie"
+        href="https://github.com/Davest9496"
         target="_blank"
         rel="noopener noreferrer"
         className="text-theme"
@@ -24,7 +24,7 @@ function Socials() {
 
       {/* LinkedIn */}
       <a
-        href="https://linkedin.com/in/dave-ejezie"
+        href="https://linkedin.com/in/dave-ejezie-896798b9"
         target="_blank"
         rel="noopener noreferrer"
         className="text-theme"
@@ -43,7 +43,7 @@ function Socials() {
 
       {/* Twitter/X */}
       <a
-        href="https://twitter.com/dave_ejezie"
+        href="https://x.com/DuEjezie"
         target="_blank"
         rel="noopener noreferrer"
         className="text-theme"
@@ -62,7 +62,7 @@ function Socials() {
 
       {/* Instagram */}
       <a
-        href="https://instagram.com/dave_ejezie"
+        href="https://www.instagram.com/duejezie/"
         target="_blank"
         rel="noopener noreferrer"
         className="text-theme"
@@ -81,7 +81,7 @@ function Socials() {
 
       {/* Upwork */}
       <a
-        href="https://www.upwork.com/freelancers/daveejezie"
+        href="https://www.upwork.com/fl/~011faa355a098da0c6?mp_source=share"
         target="_blank"
         rel="noopener noreferrer"
         className="text-theme"

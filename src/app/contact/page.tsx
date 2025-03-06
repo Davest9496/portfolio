@@ -24,7 +24,7 @@ function Page() {
             </span>{" "}
             , or visit my{" "}
             <Link
-              href="https://www.upwork.com/your-profile-link"
+              href="https://www.upwork.com/fl/~011faa355a098da0c6?mp_source=share"
               className="text-highlight font-bold capitalize mr-1"
               target="_blank"
               rel="noopener noreferrer"
