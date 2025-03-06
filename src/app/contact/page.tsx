@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 function Page() {
   return (
     <div className="px-4 xs:px-5 sm:px-6 md:px-25 lg:px-20 xl:px-50 2xl:px-100 mt-24 sm:mt-28 md:mt-32">
-      <h1 className="capitalize text-theme text-2xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold sm:font-extrabold mb-4 sm:mb-6 md:mb-8 lg:mb-10 opacity-50">
+      <h1 className="capitalize text-theme text-3xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold sm:font-extrabold mb-4 sm:mb-6 md:mb-8 lg:mb-10 opacity-50">
         contact me!
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
@@ -16,7 +16,7 @@ function Page() {
           <h3 className="mb-4 sm:mb-5 md:mb-6 text-base sm:text-lg md:text-xl font-bold opacity-85">
             Curious about turning that idea into code?
           </h3>
-          <p className="w-full md:w-4/5 text-theme text-xs xs:text-sm sm:text-base leading-relaxed sm:leading-loose mb-8 sm:mb-10 md:mb-16 lg:mb-20 opacity-55">
+          <p className="w-full md:w-4/5 text-theme text-sm xs:text-sm sm:text-base leading-relaxed sm:leading-loose mb-8 sm:mb-10 md:mb-16 lg:mb-20 opacity-55">
             I would love to hear from you! Feel free to leave me a message about
             potential projects, drop a line to schedule a coffee chat{" "}
             <span className="font-bold text-highlight">

@@ -15,7 +15,7 @@ function Hero() {
       <div className="max-w-4xl mx-auto text-left mt-6 sm:mt-8 md:mt-10">
         {/* Left-aligned header with reduced font size and weight for smaller screens */}
         <h1
-          className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono mb-2 
+          className="text-3xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono mb-2 
                        font-bold xs:font-bold sm:font-extrabold md:font-extrabold text-theme 
                        uppercase tracking-wider xs:tracking-wider sm:tracking-widest opacity-55
                        whitespace-nowrap overflow-hidden text-ellipsis"
@@ -38,7 +38,7 @@ function Hero() {
         <div className="mb-3 sm:mb-4 md:mb-5 lg:mb-6 whitespace-nowrap overflow-hidden">
           <CenterUnderline
             label="full-stack web developer"
-            className="text-sm xs:text-base sm:text-lg md:text-xl capitalize opacity-35 
+            className="text-md xs:text-base sm:text-lg md:text-xl capitalize opacity-35 
                        font-semibold xs:font-semibold sm:font-bold tracking-wide xs:tracking-wide sm:tracking-wider
                        inline-block"
           />
@@ -47,7 +47,7 @@ function Hero() {
         {/* About me paragraph - left aligned for all screen sizes */}
         <article className="mt-3 sm:mt-4 md:mt-5">
           <p
-            className="text-xs xs:text-sm sm:text-base md:text-base lg:text-lg text-theme 
+            className="text-sm xs:text-sm sm:text-base md:text-base lg:text-lg text-theme 
                        max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl 
                        leading-relaxed xs:leading-relaxed sm:leading-7 md:leading-7 lg:leading-8 opacity-75"
           >

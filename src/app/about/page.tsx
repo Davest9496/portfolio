@@ -7,7 +7,7 @@ import CenterUnderline from "@/fancy/components/text/underline-center";
 function Page() {
   return (
     <main className="px-4 xs:px-5 sm:px-6 md:px-25 lg:px-20 xl:px-50 2xl:px-100 mt-24 sm:mt-28 md:mt-32">
-      <h1 className="capitalize text-theme text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold sm:font-extrabold mb-4 sm:mb-6 md:mb-8 lg:mb-10 opacity-50">
+      <h1 className="capitalize text-theme text-3xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold sm:font-extrabold mb-4 sm:mb-6 md:mb-8 lg:mb-10 opacity-50">
         about me.
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
@@ -27,8 +27,8 @@ function Page() {
           </div>
         </div>
         <div className="lg:col-span-3 mt-6 lg:mt-0">
-          <article className="opacity-55 mb-8 sm:mb-10 md:mb-12">
-            <p className="text-xs xs:text-sm sm:text-base text-theme max-w-full sm:max-w-xl leading-relaxed sm:leading-loose">
+          <article className="opacity-55 mb-8 sm:mb-10 md:mb-12 text-base">
+            <p className=" xs:text-sm sm:text-md text-theme max-w-full sm:max-w-xl leading-relaxed sm:leading-loose">
               As a web developer based in London, I am passionate about creating
               innovative digital solutions that help businesses thrive. My goal
               is to merge my enthusiasm for business with my technical expertise

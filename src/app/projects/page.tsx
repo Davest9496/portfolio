@@ -108,7 +108,7 @@ function Page() {
 
   return (
     <main className="px-4 xs:px-5 sm:px-6 md:px-20 lg:px-20 xl:px-50 2xl:px-100 mt-24 sm:mt-28 md:mt-32">
-      <h1 className="capitalize text-theme text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold sm:font-extrabold mb-4 sm:mb-6 md:mb-8 lg:mb-10 opacity-50">
+      <h1 className="capitalize text-theme text-3xl xs:text-3xl sm:text-5xl md:text-4xl lg:text-5xl font-bold sm:font-extrabold mb-4 sm:mb-6 md:mb-8 lg:mb-10 opacity-50">
         Featured Projects.
       </h1>
 
@@ -116,7 +116,7 @@ function Page() {
       {DATA.map((project: ProjectData, index: number) => (
         <div
           key={project.id}
-          className={`mb-8 sm:mb-12 md:mb-16 lg:mb-20 transition-all duration-500 ease-in-out transform hover:scale-[1.02] sm:hover:scale-[1.03] md:hover:scale-[1.05] rounded-lg p-2 xs:p-3 sm:p-4 animate-fadeIn max-w-full`}
+          className={`mb-8 sm:mb-12 md:mb-16 lg:mb-20 transition-all duration-500 ease-in-out transform rounded-lg p-2 xs:p-3 sm:p-4 animate-fadeIn max-w-full`}
           style={{ animationDelay: `${index * 200}ms` }}
         >
           {/* Project layout - grid with number on left, content on right */}
