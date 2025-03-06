@@ -20,13 +20,13 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Dave Ejezie | Full-Stack Software Developer",
+    default: "Dave Ejezie | Full-Stack Web Developer",
     template: "%s | Dave Ejezie",
   },
   description:
-    "Experienced Full-Stack Software Developer based in London specializing in web development, React, Next.js, and TypeScript.",
+    "Experienced Full-Stack Web Developer based in London specializing in web development, React, Next.js, and TypeScript.",
   keywords: [
-    "Full-Stack Software Developer",
+    "Full-Stack Web Developer",
     "web developer",
     "frontend developer",
     "React",
@@ -42,20 +42,20 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Dave Ejezie | Full-Stack Software Developer",
+    title: "Dave Ejezie | Full-Stack Web Developer",
     description:
-      "Experienced Full-Stack Software Developer based in London specializing in web development, React, Next.js, and TypeScript.",
-    url: "https://your-domain.com",
+      "Experienced Full-Stack Web Developer based in London specializing in web development, React, Next.js, and TypeScript.",
+    url: "https://duejezie.dev",
     siteName: "Dave Ejezie",
     locale: "en_GB",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dave Ejezie | Full-Stack Software Developer",
+    title: "Dave Ejezie | Full-Stack Web Developer",
     description:
-      "Experienced Full-Stack Software Developer based in London specializing in web development, React, Next.js, and TypeScript.",
-    creator: "@your_twitter_handle",
+      "Experienced Full-Stack Web Developer based in London specializing in web development, React, Next.js, and TypeScript.",
+    creator: "@duejezie",
   },
 };
 
@@ -67,6 +67,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
@@ -79,10 +80,10 @@ export default function RootLayout({
       <head>
         <ThemeScript />
       </head>
-      <body className="antialiased min-h-screen">
+      <body className="antialiased min-h-screen overflow-x-hidden">
         <ThemeInit />
-        <MouseAnimation/>
-        <Header/>
+        <MouseAnimation />
+        <Header />
         {children}
       </body>
     </html>

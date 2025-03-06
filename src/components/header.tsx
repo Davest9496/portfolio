@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed z-50 top-0 py-4 border-b border-theme/10 bg-theme w-full min-w-full">
+    <header className="fixed z-50 top-0 py-4 border-b border-theme/10 bg-theme w-full">
       <div className="px-4 sm:px-8 md:px-16 lg:px-12 xl:px-14 mx-auto max-w-7xl">
         <div className="flex justify-between items-center">
           {/* Logo/Name Section */}
@@ -26,7 +26,7 @@ const Header = () => {
           </div>
 
           {/* Burger Menu Button (visible on mobile only) */}
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden max-w-full flex items-center"> 
             <button
               className="text-theme p-2"
               onClick={toggleMobileMenu}
