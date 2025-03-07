@@ -15,7 +15,7 @@ interface ProjectData {
   image: string;
   details: string[];
   tools: string[];
-  link: string
+  link: string;
 }
 
 // Define fadeInAnimation outside the component to avoid scoping issues
@@ -52,29 +52,47 @@ function Page() {
   };
 
   // Function to truncate text and add "read more" if needed
-  const truncateText = (text: string, projectId: number, maxLength = 150) => {
-    if (text.length <= maxLength || expandedDescriptions.includes(projectId)) {
+  // Now operates on the combined text of all details with line breaks
+  const truncateText = (
+    details: string[],
+    projectId: number,
+    maxLength = 150
+  ) => {
+    // If expanded, show all details with line breaks between them
+    if (expandedDescriptions.includes(projectId)) {
       return (
         <>
-          {text}
-          {text.length > maxLength && (
-            <span
-              className="text-highlight ml-1 cursor-pointer hover:underline"
-              onClick={(e) => {
-                e.preventDefault();
-                toggleDescription(projectId);
-              }}
-            >
-              read less
-            </span>
-          )}
+          {details.map((detail, index) => (
+            <React.Fragment key={`detail-fragment-${index}`}>
+              {index > 0 && <><br /><br /></>}
+              {detail}
+            </React.Fragment>
+          ))}
+          <span
+            className="text-highlight ml-1 cursor-pointer hover:underline"
+            onClick={(e) => {
+              e.preventDefault();
+              toggleDescription(projectId);
+            }}
+          >
+            read less
+          </span>
         </>
       );
     }
 
+    // Join all details into a single string for truncation
+    const combinedText = details.join(" ");
+
+    // If combined text is shorter than max length, show it all
+    if (combinedText.length <= maxLength) {
+      return combinedText;
+    }
+
+    // Otherwise truncate and add "read more" button
     return (
       <>
-        {text.substring(0, maxLength)}...
+        {combinedText.substring(0, maxLength)}...
         <span
           className="text-highlight ml-1 cursor-pointer hover:underline"
           onClick={(e) => {
@@ -147,8 +165,10 @@ function Page() {
                 <h3 className="mb-2 xs:mb-3 text-highlight text-lg xs:text-xl sm:text-2xl font-semibold capitalize">
                   {project.title}
                 </h3>
-                <p className="text-theme mb-3 xs:mb-4 text-xs xs:text-sm sm:text-base">
-                  {truncateText(project.details[0], project.id, 200)}
+
+                {/* Single paragraph with all details combined and truncated */}
+                <p className="text-theme mb-3 xs:mb-4 text-xs xs:text-sm xl:text-sm sm:text-base opacity-75">
+                  {truncateText(project.details, project.id, 300)}
                 </p>
 
                 {/* Tech stack buttons */}
@@ -156,14 +176,19 @@ function Page() {
                   {project.tools.map((tool, i) => (
                     <span
                       key={`${project.id}-tool-${i}`}
-                      className="inline-block px-3 xs:px-2 py-1 rounded-full text-highlight text-[10px] xs:text-xs font-mono capitalize opacity-70 border border-[#129137]"
+                      className="inline-block px-3 xs:px-2 py-1 rounded-full text-highlight text-[10px] xs:text-xs font-mono capitalize opacity-75 border border-[#129137]"
                     >
                       {tool}
                     </span>
                   ))}
                 </div>
 
-                <Link href={`${project.link}`} className="inline-block" target="_blank" rel="noopener noreferrer">
+                <Link
+                  href={`${project.link}`}
+                  className="inline-block"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <CenterUnderline
                     label="view project"
                     className="inline-block uppercase text-xs tracking-wider"

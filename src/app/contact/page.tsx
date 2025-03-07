@@ -16,7 +16,7 @@ function Page() {
           <h3 className="mb-4 sm:mb-5 md:mb-6 text-base sm:text-lg md:text-xl font-bold opacity-85">
             Curious about turning that idea into code?
           </h3>
-          <p className="text-theme text-sm xs:text-sm sm:text-base xl:text-sm leading-relaxed sm:leading-loose mb-8 sm:mb-10 md:mb-16 lg:mb-20 opacity-55">
+          <p className="text-theme text-sm xs:text-sm sm:text-base xl:text-sm leading-relaxed sm:leading-loose mb-8 sm:mb-10 md:mb-16 lg:mb-20 opacity-75">
             I would love to hear from you! Feel free to leave me a message about
             potential projects, drop a line to schedule a coffee chat{" "}
             <span className="font-bold text-highlight">

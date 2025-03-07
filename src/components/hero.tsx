@@ -49,7 +49,7 @@ function Hero() {
           <p
             className="text-sm xs:text-sm sm:text-sm md:text-sm lg:text-base xl:text-sm text-theme 
                        max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl 
-                       leading-relaxed xs:leading-relaxed sm:leading-7 md:leading-7 lg:leading-8 opacity-75"
+                       leading-relaxed xs:leading-relaxed sm:leading-7 md:leading-7 lg:leading-8 opacity-95"
           >
             As a London-based web developer, I combine my
             <span className="font-bold text-highlight opacity-95">
