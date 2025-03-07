@@ -84,35 +84,27 @@ function Page() {
               className="uppercase text-theme text-xs sm:text-sm tracking-wider sm:tracking-widest opacity-55 font-medium"
             />
             <div className="mt-4 sm:mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 opacity-75">
-              <div className="border border-[#129137]/50 rounded-md p-2 sm:p-3 text-center hover:border-highlight/80 transition-colors">
-                <span className="text-xs sm:text-sm">
-                  JavaScript/TypeScript
-                </span>
-              </div>
-              <div className="border border-[#129137]/50 rounded-md p-2 sm:p-3 text-center hover:border-highlight/30 transition-colors">
-                <span className="text-xs sm:text-sm">React & Next.js</span>
-              </div>
-              <div className="border border-[#129137]/50 rounded-md p-2 sm:p-3 text-center hover:border-highlight/30 transition-colors">
-                <span className="text-xs sm:text-sm">Node.js</span>
-              </div>
-              <div className="border border-[#129137]/50 rounded-md p-2 sm:p-3 text-center hover:border-highlight/30 transition-colors">
-                <span className="text-xs sm:text-sm">Python/Flask</span>
-              </div>
-              <div className="border border-[#129137]/50 rounded-md p-2 sm:p-3 text-center hover:border-highlight/30 transition-colors">
-                <span className="text-xs sm:text-sm">Tailwind CSS</span>
-              </div>
-              <div className="border border-[#129137]/50 rounded-md p-2 sm:p-3 text-center hover:border-highlight/30 transition-colors">
-                <span className="text-xs sm:text-sm">Postgres</span>
-              </div>
-              <div className="border border-[#129137]/50 rounded-md p-2 sm:p-3 text-center hover:border-highlight/30 transition-colors">
-                <span className="text-xs sm:text-sm">API Development</span>
-              </div>
-              <div className="border border-[#129137]/50 rounded-md p-2 sm:p-3 text-center hover:border-highlight/30 transition-colors">
-                <span className="text-xs sm:text-sm">CI/CD</span>
-              </div>
-              <div className="border border-[#129137]/50 rounded-md p-2 sm:p-3 text-center hover:border-highlight/30 transition-colors">
-                <span className="text-xs sm:text-sm">AWS Deployment</span>
-              </div>
+              {[
+                "JavaScript/TypeScript",
+                "React & Next.js",
+                "Angular",
+                "Node.js",
+                "Python/Flask",
+                "Tailwind CSS",
+                "Postgres",
+                "API Development",
+                "CI/CD",
+                "AWS Deployment",
+              ].map((skill, index) => (
+                <div
+                  key={index}
+                  className={`border border-[#129137]/50 rounded-md p-2 sm:p-3 text-center hover:border-highlight/${
+                    index === 0 ? "80" : "30"
+                  } transition-colors`}
+                >
+                  <span className="text-xs sm:text-sm">{skill}</span>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -206,7 +198,7 @@ function Page() {
             </div>
           </div>
 
-          <div className="mt-8 sm:mt-10 md:mt-12 xl:mt-50">
+          <div className="mt-28 sm:mt-30 md:mt-32 xl:mt-50">
             <Footer />
           </div>
         </div>
