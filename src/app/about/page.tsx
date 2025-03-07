@@ -81,7 +81,7 @@ function Page() {
           <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-20">
             <CenterUnderline
               label="Technical Skills"
-              className="uppercase text-theme text-xs sm:text-sm tracking-wider sm:tracking-widest opacity-55 font-medium"
+              className="uppercase text-theme text-sm sm:text-sm md:text-lg tracking-wider sm:tracking-widest opacity-55 font-medium"
             />
             <div className="mt-4 sm:mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 opacity-75">
               {[
@@ -112,7 +112,7 @@ function Page() {
           <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-20">
             <CenterUnderline
               label="Work Philosophy"
-              className="uppercase text-theme text-xs sm:text-sm tracking-wider sm:tracking-widest opacity-55 font-medium"
+              className="uppercase text-theme text-sm sm:text-sm md:text-lg tracking-wider sm:tracking-widest opacity-55 font-medium"
             />
             <div className="mt-4 sm:mt-6 opacity-75">
               <p className="xs:text-sm sm:text-md xl:text-sm text-theme max-w-full sm:max-w-xl leading-relaxed sm:leading-loose">
@@ -133,7 +133,7 @@ function Page() {
           <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-20">
             <CenterUnderline
               label="Interests & Hobbies"
-              className="uppercase text-theme text-xs sm:text-sm tracking-wider sm:tracking-widest opacity-55 font-medium"
+              className="uppercase text-theme text-sm sm:text-sm md:text-lg tracking-wider sm:tracking-widest opacity-55 font-medium"
             />
             <div className="mt-4 sm:mt-6 opacity-75">
               <p className="xs:text-sm sm:text-md xl:text-sm text-theme max-w-full sm:max-w-xl leading-relaxed sm:leading-loose">
@@ -160,7 +160,7 @@ function Page() {
           <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-20">
             <CenterUnderline
               label="Professional Journey"
-              className="uppercase text-theme text-xs sm:text-sm tracking-wider sm:tracking-widest opacity-55 font-medium"
+              className="uppercase text-theme text-sm sm:text-sm md:text-lg tracking-wider sm:tracking-widest opacity-55 font-medium"
             />
             <div className="mt-4 sm:mt-6 opacity-75 xl:text-sm">
               <div className="border-l-2 border-[#129137]/50 pl-4">
@@ -168,7 +168,7 @@ function Page() {
                   <h4 className="text-sm sm:text-base font-extrabold ">
                     Self-Taught Developer Journey
                   </h4>
-                  <p className="text-xs sm:text-sm mt-1">
+                  <p className="text-sm sm:text-sm mt-1">
                     My path to web development began with{" "}
                     <span className="text-highlight font-medium">
                       UI/UX design
@@ -187,7 +187,7 @@ function Page() {
                   <h4 className="text-sm sm:text-base font-extrabold">
                     Freelance Experience
                   </h4>
-                  <p className="text-xs sm:text-sm mt-1">
+                  <p className="text-sm sm:text-sm mt-1">
                     Working with diverse clients has sharpened my ability to
                     translate business requirements into technical solutions
                     while maintaining clear communication throughout the

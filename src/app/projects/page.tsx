@@ -216,7 +216,7 @@ function Page() {
         </div>
       ))}
 
-      <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-16">
+      <div className="mt-28 sm:mt-30 md:mt-32 lg:mt-36 xl:mt-50">
         <Socials />
       </div>
 
