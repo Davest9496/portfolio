@@ -5,6 +5,7 @@ import ThemeInit from "@/components/theme-init";
 import { ThemeScript } from "@/components/theme-script";
 import Header from "@/components/header";
 import MouseAnimation from "@/components/mouse-animation";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -81,6 +82,7 @@ export default function RootLayout({
         <ThemeScript />
       </head>
       <body className="antialiased min-h-screen overflow-x-hidden">
+        <Analytics/>
         <ThemeInit />
         <MouseAnimation />
         <Header />
