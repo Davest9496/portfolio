@@ -91,7 +91,7 @@ function Page() {
                 "Node.js",
                 "Python/Flask",
                 "Tailwind CSS",
-                "Postgres",
+                "SQL",
                 "API Development",
                 "CI/CD",
                 "AWS Deployment",
