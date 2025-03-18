@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeInit from "@/components/theme-init";
+import ServiceWorkerRegistration from "@/components/service-worker-registeration";
 import { ThemeScript } from "@/components/theme-script";
 import Header from "@/components/header";
 import MouseAnimation from "@/components/mouse-animation";
@@ -84,11 +85,12 @@ export default function RootLayout({
       </head>
       <body className="antialiased min-h-screen overflow-x-hidden">
         <ThemeInit />
+        <ServiceWorkerRegistration />
         <MouseAnimation />
         <Header />
         {children}
-        <Analytics/>
-        <SpeedInsights/>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
