@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Set sitemap location
-Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: https://www.duejezie.dev/sitemap.xml

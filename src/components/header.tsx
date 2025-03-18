@@ -153,7 +153,7 @@ const Header = () => {
               ))}
               <li className="border border-theme/75 rounded p-3 hover:bg-theme/10 transition duration-200 font-mono capitalize w-full text-center">
                 <Link
-                  href="https://www.upwork.com/your-profile-link"
+                  href="https://www.upwork.com/fl/~011faa355a098da0c6?mp_source=share"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMobileMenuOpen(false)}
