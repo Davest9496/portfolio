@@ -64,12 +64,17 @@ function Page() {
         <>
           {details.map((detail, index) => (
             <React.Fragment key={`detail-fragment-${index}`}>
-              {index > 0 && <><br /><br /></>}
+              {index > 0 && (
+                <>
+                  <br />
+                  <br />
+                </>
+              )}
               {detail}
             </React.Fragment>
           ))}
           <span
-            className="text-highlight ml-1 cursor-pointer hover:underline"
+            className="text-highlight ml-1 cursor-pointer hover:underline font-bold"
             onClick={(e) => {
               e.preventDefault();
               toggleDescription(projectId);
@@ -94,7 +99,7 @@ function Page() {
       <>
         {combinedText.substring(0, maxLength)}...
         <span
-          className="text-highlight ml-1 cursor-pointer hover:underline"
+          className="text-highlight ml-1 cursor-pointer hover:underline font-bold"
           onClick={(e) => {
             e.preventDefault();
             toggleDescription(projectId);
@@ -127,7 +132,7 @@ function Page() {
 
   return (
     <main className="px-4 xs:px-5 sm:px-6 md:px-20 lg:px-20 xl:px-50 2xl:px-100 mt-24 sm:mt-28 md:mt-32">
-      <h1 className="capitalize text-theme text-3xl xs:text-3xl sm:text-5xl md:text-4xl lg:text-5xl font-bold sm:font-extrabold mb-4 sm:mb-6 md:mb-8 lg:mb-10 opacity-50">
+      <h1 className="capitalize text-theme text-3xl xs:text-3xl sm:text-5xl md:text-4xl lg:text-5xl font-bold sm:font-extrabold mb-4 sm:mb-6 md:mb-8 lg:mb-10 opacity-90">
         Featured Projects.
       </h1>
 
@@ -142,7 +147,7 @@ function Page() {
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {/* Project number on the left */}
             <div className="sm:col-span-1 flex sm:justify-end items-start ">
-              <div className="text-theme text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold sm:font-extrabold opacity-50">
+              <div className="text-theme text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold sm:font-extrabold opacity-90">
                 {String(project.id).padStart(2, "0")}
               </div>
             </div>
@@ -162,12 +167,12 @@ function Page() {
 
               {/* Project details */}
               <div className="w-full">
-                <h3 className="mb-2 xs:mb-3 text-highlight text-lg xs:text-xl sm:text-2xl font-semibold capitalize">
+                <h3 className="mb-2 xs:mb-3 text-highlight text-lg xs:text-xl sm:text-2xl font-extrabold capitalize">
                   {project.title}
                 </h3>
 
                 {/* Single paragraph with all details combined and truncated */}
-                <p className="text-theme mb-3 xs:mb-4 text-xs xs:text-sm xl:text-sm sm:text-base opacity-75">
+                <p className="text-theme mb-3 xs:mb-4 text-xs xs:text-sm xl:text-sm sm:text-base opacity-95 font-medium">
                   {truncateText(project.details, project.id, 300)}
                 </p>
 
@@ -176,7 +181,7 @@ function Page() {
                   {project.tools.map((tool, i) => (
                     <span
                       key={`${project.id}-tool-${i}`}
-                      className="inline-block px-3 xs:px-2 py-1 rounded-full text-highlight text-[10px] xs:text-xs font-mono capitalize opacity-75 border border-[#129137]"
+                      className="inline-block px-3 xs:px-2 py-1 rounded-full text-highlight text-[10px] xs:text-xs font-mono capitalize opacity-95 border border-[#0A6B28] font-semibold"
                     >
                       {tool}
                     </span>
@@ -191,7 +196,7 @@ function Page() {
                 >
                   <CenterUnderline
                     label="view project"
-                    className="inline-block uppercase text-xs tracking-wider"
+                    className="inline-block uppercase text-xs tracking-wider font-bold"
                   />
                   <span className="text-highlight">
                     <svg

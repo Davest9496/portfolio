@@ -149,7 +149,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="w-full max-w-2xl mb-50">
-      <h2 className="text-2xl md:text-3xl font-bold mb-6 opacity-50">
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 opacity-90">
         Get In Touch
       </h2>
 

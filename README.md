@@ -1,70 +1,40 @@
-# Dave Ejezie Portfolio Website
+# Dave Ejezie - Portfolio Website
 
-![Next.js](https://img.shields.io/badge/Next.js-15.x-black)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4.x-38B2AC)
-![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000)
+A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.
 
-A modern, responsive portfolio website for showcasing my work as a Full-Stack Web Developer. Built with Next.js, TypeScript, and Tailwind CSS, optimized for performance, and designed with SEO in mind.
+## Features
 
-## ✨ Features
+- Responsive design (mobile-first approach)
+- Dark/Light mode toggle
+- SEO optimized
+- Progressive Web App (PWA) support
+- Optimized performance
+- Contact form with nodemailer integration
+- Projects showcase
+- Animated UI elements
 
-- **Responsive Design**: Mobile-first approach with optimizations for 4 different screen sizes
-- **Dark/Light Mode**: Automatic theme detection with toggle functionality
-- **Interactive Components**: Smooth animations and interactive UI elements
-- **Contact Form**: Fully functional contact form with email integration
-- **SEO Optimized**: Meta tags, OpenGraph, and Twitter card configurations
-- **Projects Showcase**: Feature-rich projects display with expandable descriptions
-- **Performance Optimized**: Fast loading times with Next.js optimizations
-- **Vercel Analytics**: Built-in analytics for tracking visitor engagement
+## Tech Stack
 
-## 🚀 Tech Stack
+- [Next.js](https://nextjs.org/) - React framework for production
+- [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Nodemailer](https://nodemailer.com/) - Module for email sending
+- [Vercel Analytics](https://vercel.com/analytics) - Performance monitoring
+- [Vercel Speed Insights](https://vercel.com/docs/speed-insights) - Performance metrics
 
-- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
-- **Email**: [Nodemailer](https://nodemailer.com/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Animations**: CSS animations and [Motion](https://motion.dev/)
-- **Analytics**: [Vercel Analytics](https://vercel.com/analytics)
-- **Deployment**: [Vercel](https://vercel.com/)
-
-## 📊 Project Structure
-
-```
-portfolio/
-├── public/             # Static assets
-├── src/
-│   ├── app/            # App router pages
-│   │   ├── about/      # About page
-│   │   ├── api/        # API routes
-│   │   ├── contact/    # Contact page
-│   │   ├── projects/   # Projects page
-│   │   └── home/       # Home page
-│   ├── assets/         # Project data
-│   ├── components/     # Reusable components
-│   │   ├── header.tsx  # Responsive header with burger menu
-│   │   ├── hero.tsx    # Hero component
-│   │   ├── footer.tsx  # Footer component
-│   │   └── ...         # Other components
-│   ├── fancy/          # Special effect components
-│   └── ...
-└── ...
-```
-
-## 🛠️ Setup and Installation
+## Getting Started
 
 ### Prerequisites
 
-- Node.js 18.x or higher
-- npm, yarn, or pnpm
+- Node.js 16.x or higher
+- npm or yarn
 
-### Installation Steps
+### Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/portfolio.git
-   cd portfolio
+   git clone https://github.com/yourusername/portfolio-website.git
+   cd portfolio-website
    ```
 
 2. Install dependencies:
@@ -72,89 +42,76 @@ portfolio/
    npm install
    # or
    yarn install
-   # or
-   pnpm install
    ```
 
-3. Set up environment variables:
-   Create a `.env.local` file in the root directory with the following variables:
+3. Generate PWA icons:
+   ```bash
+   npm run generate-icons
+   # or
+   yarn generate-icons
    ```
-   # Email service configuration
+
+4. Create a `.env.local` file in the root directory with the following variables:
+   ```env
    SMTP_HOST=your-smtp-host
    SMTP_PORT=587
-   SMTP_SECURE=false
    SMTP_USER=your-email@example.com
-   SMTP_PASSWORD=your-password
+   SMTP_PASSWORD=your-email-password
+   SMTP_SECURE=false
    EMAIL_TO=recipient-email@example.com
    ```
 
-4. Run the development server:
+5. Start the development server:
    ```bash
    npm run dev
    # or
    yarn dev
-   # or
-   pnpm dev
    ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+6. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-## 🌐 Deployment
+## PWA Setup
 
-This project is designed to be deployed on [Vercel](https://vercel.com/). To deploy:
+This project is configured as a Progressive Web App (PWA), which allows users to install it on their devices. The PWA setup includes:
 
-1. Push your repository to GitHub
-2. Import your project in Vercel
-3. Configure environment variables
-4. Deploy!
+- A web manifest file (`public/manifest.json`)
+- Service worker for offline support (`public/sw.js`)
+- Various sized icons for different devices
+- Theme color configuration
 
-## 🔍 SEO Optimization
+To customize the PWA setup, modify the following files:
 
-This portfolio website is optimized for search engines with:
+- `public/manifest.json` - App metadata and icons
+- `public/sw.js` - Service worker logic for caching and offline support
+- `src/components/service-worker-registration.tsx` - Service worker registration
 
-- Semantic HTML structure
-- Optimized metadata for each page
-- OpenGraph and Twitter card configurations
-- Responsive design (mobile-friendly)
-- Fast loading times
-- Site analytics integration
+## Deployment
 
-## 📱 Responsive Design
+This website is configured for deployment on Vercel. Simply connect your GitHub repository to Vercel for automatic deployments.
 
-The website is designed with a mobile-first approach and is optimized for:
-- Small mobile devices
-- Larger mobile devices/tablets
-- Desktop devices
-- Large desktop screens
+### Environment Variables
 
-## 🧩 Components
+Make sure to add the environment variables from the `.env.local` file to your Vercel project settings.
 
-- **Header**: Responsive navigation with burger menu for mobile
-- **Hero**: Engaging introduction with typewriter effect
-- **Projects**: Interactive project showcases with expandable descriptions
-- **Contact Form**: Functional form with email integration
-- **Theme Toggle**: Light/dark mode switching with system preference detection
-- **Mouse Animation**: Interactive cursor effects
+## SEO Optimization
 
-## 📧 Contact Form
+The website is optimized for search engines with:
 
-The contact form is powered by Nodemailer and Next.js API routes. It includes:
-- Input validation
-- Error handling
-- Email formatting
-- SMTP integration
+- Semantic HTML
+- Metadata for each page
+- Proper heading hierarchy
+- Descriptive alt text for images
+- Open Graph and Twitter card metadata
+- Structured data where appropriate
 
-## 🙏 Acknowledgements
+## Performance Optimization
 
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Vercel Platform](https://vercel.com/)
-- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+- Code splitting and lazy loading
+- Image optimization
+- Font optimization
+- Cache control for static assets
+- Minification and compression
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
-
----
-
-Designed & Developed with ❤️ by Dave Ejezie
