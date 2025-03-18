@@ -13,9 +13,6 @@ const Header = () => {
   // Get current pathname to determine active link
   const pathname = usePathname();
 
-  // Debug the current path
-  console.log("Current pathname:", pathname);
-
   // Toggle mobile menu function
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -28,6 +25,10 @@ const Header = () => {
     { path: "/projects", label: "Projects" },
     { path: "/contact", label: "Contact" },
   ];
+
+  // Upwork profile URL - defined once to ensure consistency
+  const upworkProfileUrl =
+    "https://www.upwork.com/fl/~011faa355a098da0c6?mp_source=share";
 
   return (
     <header className="fixed z-50 top-0 py-4 border-b border-theme/10 bg-theme w-full">
@@ -106,7 +107,7 @@ const Header = () => {
                 ))}
                 <li className="border border-theme/75 rounded p-3 hover:scale-105 transition duration-200 shadow-lg font-mono capitalize">
                   <Link
-                    href="https://www.upwork.com/your-profile-link"
+                    href={upworkProfileUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -153,7 +154,7 @@ const Header = () => {
               ))}
               <li className="border border-theme/75 rounded p-3 hover:bg-theme/10 transition duration-200 font-mono capitalize w-full text-center">
                 <Link
-                  href="https://www.upwork.com/fl/~011faa355a098da0c6?mp_source=share"
+                  href={upworkProfileUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMobileMenuOpen(false)}

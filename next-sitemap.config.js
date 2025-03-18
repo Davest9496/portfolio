@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || "https://duejezie.dev",
+  siteUrl: process.env.SITE_URL || "https://www.duejezie.dev",
   generateRobotsTxt: true,
   sitemapSize: 7000,
   outDir: "./public",
@@ -9,7 +9,7 @@ module.exports = {
   // Additional configuration
   robotsTxtOptions: {
     additionalSitemaps: [
-      "https://duejezie.dev/sitemap.xml",
+      "https://www.duejezie.dev/sitemap.xml",
       // Add additional sitemaps if needed
     ],
   },
